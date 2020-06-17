@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:nasvi/repository/worker-repo.dart';
 import 'package:nasvi/screens/screen.dart';
 
 class UserForm extends StatefulWidget {
@@ -44,16 +46,19 @@ class _UserFormState extends State<UserForm> {
               ),
               OutlineButton(
                 child: Text("Yes"),
-                onPressed: () {
-                  Navigator.of(context).pop(true);
+                onPressed: () async {
+                  if (_fbKey.currentState.saveAndValidate()) {
+                    await RepositoryProvider.of<WorkersRepository>(context).addNewWorker(_fbKey.currentState.value);
+                    Navigator.of(context).pop(true);
+                    return;
+                  }
                 },
               )
             ],
           );
         }).then((value) {
           if (value != null && value) {
-              _fbKey.currentState.saveAndValidate();
-              print(_fbKey.currentState.value);
+
           }
     });
   }

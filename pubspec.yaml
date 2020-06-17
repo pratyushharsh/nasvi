@@ -29,6 +29,7 @@ dependencies:
   intl:
   flutter_bloc:
   equatable:
+  cloud_firestore:
 
 
   # The following adds the Cupertino Icons font to your application.

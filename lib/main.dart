@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:nasvi/repository/worker-repo.dart';
 import 'package:nasvi/simple_bloc_delegate.dart';
 
 import 'bloc/theme/theme_bloc.dart';
@@ -16,18 +17,25 @@ void main() {
   BlocSupervisor.delegate = SimpleBlocDelegate();
 
   runApp(
-    MultiBlocProvider(
+    MultiRepositoryProvider(
       providers: [
-        BlocProvider<ThemeBloc>(
-          create: (BuildContext context) => ThemeBloc()
-            ..add(InitialTheme(
-                isTestMode: false,
-                locale: null,
-                themeMode: ThemeMode.system,
-                platform: defaultTargetPlatform)),
+        RepositoryProvider<WorkersRepository>(
+          create: (context) => WorkersRepository(),
         ),
       ],
-      child: MyApp(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<ThemeBloc>(
+            create: (BuildContext context) => ThemeBloc()
+              ..add(InitialTheme(
+                  isTestMode: false,
+                  locale: null,
+                  themeMode: ThemeMode.system,
+                  platform: defaultTargetPlatform)),
+          ),
+        ],
+        child: MyApp(),
+      ),
     ),
   );
 }
