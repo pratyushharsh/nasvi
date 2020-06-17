@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "name": "Name",
+
+  "gender": "Gender",
+  "apl_category": "Are you above APL Category",
+  "bpl_category": "APL Category"
+}
