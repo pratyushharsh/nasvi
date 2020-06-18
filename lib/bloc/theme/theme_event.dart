@@ -17,8 +17,9 @@ class InitialTheme extends ThemeEvent {
   final Locale locale;
   final TargetPlatform platform;
   final bool isTestMode;
+  final double textScaleFactor;
 
-  InitialTheme({this.themeMode, this.locale, this.platform, this.isTestMode});
+  InitialTheme({this.themeMode, this.locale, this.platform, this.isTestMode, this.textScaleFactor});
 }
 
 class ChangeLocale extends ThemeEvent {

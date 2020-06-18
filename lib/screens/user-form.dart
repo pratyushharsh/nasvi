@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:nasvi/bloc/worker/bloc.dart';
+import 'package:nasvi/config/router.dart';
 import 'package:nasvi/repository/worker-repo.dart';
 import 'package:nasvi/screens/screen.dart';
 
@@ -46,26 +48,37 @@ class _UserFormState extends State<UserForm> {
               ),
               OutlineButton(
                 child: Text("Yes"),
-                onPressed: () async {
+                onPressed: () {
                   if (_fbKey.currentState.saveAndValidate()) {
-                    await RepositoryProvider.of<WorkersRepository>(context).addNewWorker(_fbKey.currentState.value);
                     Navigator.of(context).pop(true);
-                    return;
                   }
                 },
               )
             ],
           );
         }).then((value) {
-          if (value != null && value) {
-
-          }
+      if (value != null && value) {
+        BlocProvider.of<WorkerBloc>(context).add(AddNewWorker(_fbKey.currentState.value));
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.language),
+          ),
+          IconButton(
+            icon: Icon(Icons.minimize)
+          ),
+          IconButton(
+            icon: Icon(Icons.add),
+          ),
+        ],
+      ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -102,15 +115,67 @@ class _UserFormState extends State<UserForm> {
                 onPressed: _showSubmitDialogue, label: Text("Submit"))
         ],
       ),
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(10),
-          child: FormBuilder(
-            autovalidate: true,
-            initialValue: _fbKey?.currentState?.value ?? {},
-            key: _fbKey,
-            readOnly: false,
-            child: _body(),
+      body: BlocListener<WorkerBloc, WorkerState>(
+        listener: (context, state) {
+          if (state is AddingNewWorker) {
+            Scaffold.of(context)
+              ..hideCurrentSnackBar()
+              ..showSnackBar(
+                SnackBar(
+                  content: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Adding...'),
+                      CircularProgressIndicator(),
+                    ],
+                  ),
+                ),
+              );
+          }
+
+          if (state is SuccessAddingWorker) {
+            Scaffold.of(context)
+              ..hideCurrentSnackBar()
+              ..showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.green,
+                  content: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Successfully Added Worker'),
+                    ],
+                  ),
+                ),
+              );
+            Navigator.of(context).pushReplacementNamed(Router.THANKYOU_ROUTE);
+          }
+
+          if (state is ErrorWhileAddingWorker) {
+            Scaffold.of(context)
+              ..hideCurrentSnackBar()
+              ..showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.red,
+                  content: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Error Adding Worker. Please Try Again'),
+                    ],
+                  ),
+                ),
+              );
+          }
+        },
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: FormBuilder(
+              autovalidate: true,
+              initialValue: _fbKey?.currentState?.value ?? {},
+              key: _fbKey,
+              readOnly: false,
+              child: _body(),
+            ),
           ),
         ),
       ),
