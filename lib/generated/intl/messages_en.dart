@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function> {
     "apl_category" : MessageLookupByLibrary.simpleMessage("Are you above APL Category"),
     "bpl_category" : MessageLookupByLibrary.simpleMessage("APL Category"),
+    "covid_19_campion" : MessageLookupByLibrary.simpleMessage("During COVID-19,During the main campagin did you applied for E-ration/ration card?"),
+    "covid_19_ration_receive" : MessageLookupByLibrary.simpleMessage("Recieve Ration during COVID-19"),
     "gender" : MessageLookupByLibrary.simpleMessage("Gender"),
     "name" : MessageLookupByLibrary.simpleMessage("Name")
   };

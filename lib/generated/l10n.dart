@@ -72,6 +72,26 @@ class S {
       args: [],
     );
   }
+
+  /// `During COVID-19,During the main campagin did you applied for E-ration/ration card?`
+  String get covid_19_campion {
+    return Intl.message(
+      'During COVID-19,During the main campagin did you applied for E-ration/ration card?',
+      name: 'covid_19_campion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recieve Ration during COVID-19`
+  String get covid_19_ration_receive {
+    return Intl.message(
+      'Recieve Ration during COVID-19',
+      name: 'covid_19_ration_receive',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
