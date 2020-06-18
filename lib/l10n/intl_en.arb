@@ -3,6 +3,8 @@
   "name": "Name",
 
   "gender": "Gender",
-  "apl_category": "Are you above APL Category",
-  "bpl_category": "APL Category"
+  "apl_category"           : "Are you above APL Category",
+  "bpl_category"           : "APL Category",
+  "covid_19_campion"       : "During COVID-19,During the main campagin did you applied for E-ration/ration card?",
+  "covid_19_ration_receive": "Recieve Ration during COVID-19"
 }

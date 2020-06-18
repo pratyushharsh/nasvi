@@ -10,7 +10,7 @@ class PersonalDetail extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Social Security"),
+          Text("Personal Detail"),
           MyFormBuilderTextField(
             attribute: Keys.NAME,
             labelText: Keys.NAME,
@@ -48,6 +48,31 @@ class PersonalDetail extends StatelessWidget {
             options: [
               "Yes", "No"
             ]
+          ),
+          MyFormBuilderTextField(
+            attribute: Keys.RATION_CARD_NO,
+            labelText: Keys.RATION_CARD_NO,
+          ),
+          MyFormBuilderRadio(
+              attribute: Keys.CVOID_19_CAMPION,
+              labelText: Keys.CVOID_19_CAMPION,
+              options: [
+                "Yes", "No"
+              ]
+          ),
+          MyFormBuilderRadio(
+              attribute: Keys.CVOID_19_RATION_RECEIVE,
+              labelText: Keys.CVOID_19_RATION_RECEIVE,
+              options: [
+                "Yes", "No"
+              ]
+          ),
+          MyFormBuilderRadio(
+              attribute: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
+              labelText: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
+              options: [
+                "Yes", "No"
+              ]
           ),
         ],
       ),
