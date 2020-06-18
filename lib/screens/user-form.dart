@@ -21,7 +21,7 @@ class _UserFormState extends State<UserForm> {
         formKey: _fbKey,
       );
     } else if (count == 1) {
-      return SocialSecurity();
+      return PersonalDetail();
     } else if (count == 2) {
       return Occupation(
         formKey: _fbKey,

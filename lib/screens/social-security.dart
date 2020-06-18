@@ -4,7 +4,7 @@ import 'package:nasvi/widget/custom-widget.dart';
 
 import '../keys.dart';
 
-class SocialSecurity extends StatelessWidget {
+class PersonalDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyCustomCard(
