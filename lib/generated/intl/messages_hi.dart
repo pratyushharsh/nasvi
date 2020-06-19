@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "mobile" : MessageLookupByLibrary.simpleMessage("मोबाइल"),
     "name" : MessageLookupByLibrary.simpleMessage("नाम"),
     "nick_name" : MessageLookupByLibrary.simpleMessage("निक नाम"),
+    "no" : MessageLookupByLibrary.simpleMessage("नहीं"),
     "others" : MessageLookupByLibrary.simpleMessage("अन्य लोग"),
     "own_or_rent_shop" : MessageLookupByLibrary.simpleMessage("क्या आप ओवेन / किराए की दुकान कार्यालय में हैं?"),
     "owner_of_your_auto_rickshaw" : MessageLookupByLibrary.simpleMessage("क्या आप अपने ऑटो रिक्शा के मालिक हैं?"),
@@ -125,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "work_undr_mgnrega" : MessageLookupByLibrary.simpleMessage("क्या आपको मनरेगा के तहत काम मिलता है?"),
     "working_days_for_mgnrega" : MessageLookupByLibrary.simpleMessage("कितने दिन?"),
     "ww_employment_id_card" : MessageLookupByLibrary.simpleMessage("क्या आपके पास एक रोजगार आईडी कार्ड है"),
-    "ww_nagar_nigam_linked" : MessageLookupByLibrary.simpleMessage("क्या आप नगर निगम से जुड़े हैं?")
+    "ww_nagar_nigam_linked" : MessageLookupByLibrary.simpleMessage("क्या आप नगर निगम से जुड़े हैं?"),
+    "yes" : MessageLookupByLibrary.simpleMessage("हाँ")
   };
 }

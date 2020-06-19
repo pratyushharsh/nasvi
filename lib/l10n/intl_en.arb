@@ -1,5 +1,7 @@
 {
 	"@@locale": "en",
+	"yes": "Yes",
+	"no": "No",
 	"name": "Name",
 	"nick_name": "Nick Name",
 	"age": "Age",

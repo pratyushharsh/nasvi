@@ -149,12 +149,12 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
                 });
               },
               decoration: InputDecoration(
-                  labelText: widget.labelText, border: InputBorder.none),
+                  labelText: Intl.message(widget.labelText), border: InputBorder.none),
               attribute: widget.attribute,
               options: options
-                  .map((lang) => FormBuilderFieldOption(
-                        value: lang,
-                        child: Text('$lang'),
+                  .map((o) => FormBuilderFieldOption(
+                        value: o,
+                        child: Text(Intl.message(o)),
                       ))
                   .toList(growable: false),
             ),

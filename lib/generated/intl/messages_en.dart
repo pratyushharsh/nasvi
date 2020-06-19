@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "mobile" : MessageLookupByLibrary.simpleMessage("Mobile"),
     "name" : MessageLookupByLibrary.simpleMessage("Name"),
     "nick_name" : MessageLookupByLibrary.simpleMessage("Nick Name"),
+    "no" : MessageLookupByLibrary.simpleMessage("No"),
     "others" : MessageLookupByLibrary.simpleMessage("Others"),
     "own_or_rent_shop" : MessageLookupByLibrary.simpleMessage("Do you OWN/RENT Shop Office?"),
     "owner_of_your_auto_rickshaw" : MessageLookupByLibrary.simpleMessage("Are you owner of your Auto Rickshaw?"),
@@ -125,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "work_undr_mgnrega" : MessageLookupByLibrary.simpleMessage("Do you get work under MGNREGA?"),
     "working_days_for_mgnrega" : MessageLookupByLibrary.simpleMessage("How many days?"),
     "ww_employment_id_card" : MessageLookupByLibrary.simpleMessage("Do you have an Employment ID card"),
-    "ww_nagar_nigam_linked" : MessageLookupByLibrary.simpleMessage("Are you linked with Nagar Nigam?")
+    "ww_nagar_nigam_linked" : MessageLookupByLibrary.simpleMessage("Are you linked with Nagar Nigam?"),
+    "yes" : MessageLookupByLibrary.simpleMessage("Yes")
   };
 }
