@@ -84,19 +84,17 @@
   "waste_worker": "Waste Worker",
   "ww_nagar_nigam_linked": "Are you linked with Nagar Nigam?",
   "ww_employment_id_card": "Do you have an Employment ID card",
-  "domestic_worker": "Domestic Worker"
-  "work_related_id_card": "Do you have Identity card related to your work?"
+  "domestic_worker": "Domestic Worker",
+  "work_related_id_card": "Do you have Identity card related to your work?",
   "work_id_card_authorization": "If yes,who authorized it?",
   "home_based_worker": "Home Based Worker",
   "piece_rate_or_own_acct_workr": "Peice Rate/Own Account Worker",
-  "artisian_card": "Do you have an Artisian Card?"
-
+  "artisian_card": "Do you have an Artisian Card?",
   "rickshaw_puller": "Rickshaw Puller",
-  "owner_of_your_rickshaw": "Are you owner of your Rickshaw?",
+  "owner_of_your_rickshaw": "Are you owner of your Rickshaw Puller?",
   "auto_rickshaw": "Auto rickshaw",
-  "owner_of_your_auto_rickshaw": "Are you owner of your Auto Rickshaw?,"
-
-  "e-rickshaw": "E-rickshaw"
+  "owner_of_your_auto_rickshaw": "Are you owner of your Auto Rickshaw?",
+  "e_rickshaw": "E Rickshaw",
   "owner_of_your_e_rickshaw": "Are you owner of your E-Rickshaw?",
   "reg_with_municipal_body": "Registered with any municipal Body",
   "license_municipal_body": "License from municipal Body?",

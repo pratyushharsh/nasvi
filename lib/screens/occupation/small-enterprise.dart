@@ -9,10 +9,10 @@ class SmallEnterrise extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text("Small Enterprise"),
-          MyFormBuilderDropdown(
+          MyFormBuilderRadio(
               attribute: Keys.TYPE_OF_ENTERPRISE,
               labelText: Keys.TYPE_OF_ENTERPRISE,
-              items: [
+              options: [
                 "Service", "Sale/Purchase","Production/Manufacturing","Others"
               ]
           ),
