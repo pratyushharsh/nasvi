@@ -99,7 +99,7 @@ class MyFormBuilderDropdown extends StatelessWidget {
         hint: hint != null ? Text(hint) : null,
         validators: [FormBuilderValidators.required()],
         items: items
-            .map((s) => DropdownMenuItem(value: s, child: Text("$s")))
+            .map((s) => DropdownMenuItem(value: s, child: Text(s != null ? Intl.message(s) : "")))
             .toList(),
       ),
     );
