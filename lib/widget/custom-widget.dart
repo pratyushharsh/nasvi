@@ -22,16 +22,26 @@ class MyFormBuilderRadio extends StatelessWidget {
     return Container(
       child: Card(
         margin: EdgeInsets.all(6),
-        child: FormBuilderRadio(
-          decoration: InputDecoration(
-              labelText: Intl.message(labelText), border: OutlineInputBorder()),
-          attribute: attribute,
-          options: options
-              .map((lang) => FormBuilderFieldOption(
-                    value: lang,
-                    child: Text('$lang'),
-                  ))
-              .toList(growable: false),
+        child: Container(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                child: Text(Intl.message(labelText), style: TextStyle(fontWeight: FontWeight.bold),),
+              ),
+              FormBuilderRadio(
+                decoration: InputDecoration(border: InputBorder.none),
+                attribute: attribute,
+                options: options
+                    .map((lang) => FormBuilderFieldOption(
+                          value: lang,
+                          child: Text('$lang'),
+                        ))
+                    .toList(growable: false),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -83,13 +93,13 @@ class MyFormBuilderDropdown extends StatelessWidget {
       child: FormBuilderDropdown(
         onChanged: onChanged,
         attribute: attribute,
-        decoration:
-            InputDecoration(labelText: Intl.message(labelText), border: OutlineInputBorder()),
+        decoration: InputDecoration(
+            labelText: Intl.message(labelText), border: OutlineInputBorder()),
         // initialValue: 'Male',
         hint: hint != null ? Text(hint) : null,
         validators: [FormBuilderValidators.required()],
         items: items
-            .map((s) => DropdownMenuItem(value: s, child: Text("$s")))
+            .map((s) => DropdownMenuItem(value: s, child: Text(s != null ? Intl.message(s) : "")))
             .toList(),
       ),
     );
@@ -114,20 +124,19 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
 
   String curVal;
 
-
   @override
   void initState() {
     super.initState();
-    curVal = widget.formKey.currentState.fields[widget.attribute]?.currentState?.value;
+    curVal = widget
+        .formKey.currentState.fields[widget.attribute]?.currentState?.value;
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4.0)),
-        border: Border.all()
-      ),
+          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+          border: Border.all()),
       child: Card(
         margin: EdgeInsets.all(6),
         child: Column(
@@ -152,8 +161,9 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
             curVal != null && curVal == Keys.YES
                 ? FormBuilderTextField(
                     attribute: "${widget.labelText}-specify",
-                    decoration:
-                        InputDecoration(labelText: "If Other, please specify", border: InputBorder.none),
+                    decoration: InputDecoration(
+                        labelText: "If Other, please specify",
+                        border: InputBorder.none),
                     validators: [
                       (val) {
                         if (widget.formKey.currentState.fields[widget.attribute]
