@@ -127,56 +127,58 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
   @override
   void initState() {
     super.initState();
-    curVal = widget
-        .formKey.currentState.fields[widget.attribute]?.currentState?.value;
+    curVal = widget?.formKey?.currentState?.value[widget.attribute]??null;
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(4.0)),
-          border: Border.all()),
       child: Card(
         margin: EdgeInsets.all(6),
-        child: Column(
-          children: <Widget>[
-            FormBuilderRadio(
-              onChanged: (val) {
-                setState(() {
-                  curVal = widget.formKey.currentState.fields[widget.attribute]
-                      ?.currentState?.value;
-                });
-              },
-              decoration: InputDecoration(
-                  labelText: Intl.message(widget.labelText), border: InputBorder.none),
-              attribute: widget.attribute,
-              options: options
-                  .map((o) => FormBuilderFieldOption(
-                        value: o,
-                        child: Text(Intl.message(o)),
-                      ))
-                  .toList(growable: false),
-            ),
-            curVal != null && curVal == Keys.YES
-                ? FormBuilderTextField(
-                    attribute: "${widget.labelText}-specify",
-                    decoration: InputDecoration(
-                        labelText: "If Other, please specify",
-                        border: InputBorder.none),
-                    validators: [
-                      (val) {
-                        if (widget.formKey.currentState.fields[widget.attribute]
-                                    .currentState.value ==
-                                Keys.YES &&
-                            (val == null || val.isEmpty))
-                          return "Kindly specify your language";
-                        return null;
-                      },
-                    ],
-                  )
-                : Container()
-          ],
+        child: Container(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                child: Text(Intl.message(widget.labelText), style: TextStyle(fontWeight: FontWeight.bold),),
+              ),
+              FormBuilderRadio(
+                onChanged: (val) {
+                  setState(() {
+                    curVal = widget?.formKey?.currentState?.fields[widget.attribute]
+                        ?.currentState?.value;
+                  });
+                },
+                decoration: InputDecoration(border: InputBorder.none),
+                attribute: widget.attribute,
+                options: options
+                    .map((o) => FormBuilderFieldOption(
+                          value: o,
+                          child: Text(Intl.message(o)),
+                        ))
+                    .toList(growable: false),
+              ),
+              curVal != null && curVal == Keys.YES
+                  ? FormBuilderTextField(
+                      attribute: "${widget.labelText}-specify",
+                      decoration: InputDecoration(
+                          labelText: "If Other, please specify",
+                          border: InputBorder.none),
+                      validators: [
+                        (val) {
+                          if (widget.formKey.currentState.fields[widget.attribute]
+                                      .currentState.value ==
+                                  Keys.YES &&
+                              (val == null || val.isEmpty))
+                            return "Kindly specify your language";
+                          return null;
+                        },
+                      ],
+                    )
+                  : Container()
+            ],
+          ),
         ),
       ),
     );

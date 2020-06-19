@@ -19,15 +19,16 @@ class SocialSecurity extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
 //          CustomYesNoSpecify(labelText: "Hello", attribute: "custom-yes-no", formKey: formKey,),
+        CustomYesNoSpecify(labelText: Keys.HAVE_AADHAR_CARD, attribute: Keys.HAVE_AADHAR_CARD, formKey: formKey,),
 
-          MyFormBuilderRadio(
-              attribute: Keys.HAVE_AADHAR_CARD,
-              labelText: Keys.HAVE_AADHAR_CARD,
-              options: ['YES', 'NO']),
-          MyFormBuilderTextField(
-            attribute: Keys.AADHAR_CARD_NO,
-            labelText: Keys.AADHAR_CARD_NO,
-          ),
+//          MyFormBuilderRadio(
+//              attribute: Keys.HAVE_AADHAR_CARD,
+//              labelText: Keys.HAVE_AADHAR_CARD,
+//              options: ['YES', 'NO']),
+//          MyFormBuilderTextField(
+//            attribute: Keys.AADHAR_CARD_NO,
+//            labelText: Keys.AADHAR_CARD_NO,
+//          ),
           MyFormBuilderRadio(
               attribute: Keys.HAVING_SAVING_BANK_ACCOUNT,
               labelText: Keys.HAVING_SAVING_BANK_ACCOUNT,
