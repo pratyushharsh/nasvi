@@ -5,6 +5,7 @@ import 'package:nasvi/bloc/worker/bloc.dart';
 import 'package:nasvi/config/router.dart';
 import 'package:nasvi/repository/worker-repo.dart';
 import 'package:nasvi/screens/screen.dart';
+import 'package:nasvi/screens/social-security2.dart';
 
 class UserForm extends StatefulWidget {
   @override
@@ -22,11 +23,19 @@ class _UserFormState extends State<UserForm> {
       );
     } else if (count == 1) {
       return PersonalDetail();
-    } else if (count == 2) {
+    }
+    else if (count == 2) {
+      return SocialSecurity();
+    }
+    else if (count == 3) {
+      return Skill();
+    }
+    else if (count == 4) {
       return Occupation(
         formKey: _fbKey,
       );
-    } else if (count == 3) {
+
+    } else if (count == 5) {
       return Review(
         values: _fbKey.currentState.value,
       );
@@ -96,7 +105,7 @@ class _UserFormState extends State<UserForm> {
               },
               label: Text("Back"),
             ),
-          if (count < 3)
+          if (count < 5)
             FloatingActionButton.extended(
               heroTag: "increase",
               onPressed: () {
@@ -110,7 +119,7 @@ class _UserFormState extends State<UserForm> {
               },
               label: Text("Next"),
             ),
-          if (count == 3)
+          if (count == 5)
             FloatingActionButton.extended(
                 onPressed: _showSubmitDialogue, label: Text("Submit"))
         ],

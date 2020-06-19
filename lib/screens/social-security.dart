@@ -10,7 +10,8 @@ class PersonalDetail extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Personal Detail"),
+          Text("Personal Detail",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           MyFormBuilderTextField(
             attribute: Keys.NAME,
             labelText: Keys.NAME,
@@ -24,31 +25,21 @@ class PersonalDetail extends StatelessWidget {
             labelText: Keys.AGE,
           ),
           MyFormBuilderRadio(
-            attribute: Keys.GENDER,
-            labelText: Keys.GENDER,
-            options: ["Yes", "No", "Others"]
-          ),
+              attribute: Keys.GENDER,
+              labelText: Keys.GENDER,
+              options: ["Yes", "No", "Others"]),
           MyFormBuilderRadio(
-            attribute: Keys.APL_CATEGORY,
-            labelText: Keys.APL_CATEGORY,
-            options: [
-              "Yes", "No"
-            ]
-          ),
+              attribute: Keys.APL_CATEGORY,
+              labelText: Keys.APL_CATEGORY,
+              options: ["Yes", "No"]),
           MyFormBuilderRadio(
-            attribute: Keys.BPL_CATEGORY,
-            labelText: Keys.BPL_CATEGORY,
-            options: [
-              "Yes", "No"
-            ]
-          ),
+              attribute: Keys.BPL_CATEGORY,
+              labelText: Keys.BPL_CATEGORY,
+              options: ["Yes", "No"]),
           MyFormBuilderRadio(
-            attribute: Keys.RATION_CARD,
-            labelText: Keys.RATION_CARD,
-            options: [
-              "Yes", "No"
-            ]
-          ),
+              attribute: Keys.RATION_CARD,
+              labelText: Keys.RATION_CARD,
+              options: ["Yes", "No"]),
           MyFormBuilderTextField(
             attribute: Keys.RATION_CARD_NO,
             labelText: Keys.RATION_CARD_NO,
@@ -56,24 +47,15 @@ class PersonalDetail extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.CVOID_19_CAMPION,
               labelText: Keys.CVOID_19_CAMPION,
-              options: [
-                "Yes", "No"
-              ]
-          ),
+              options: ["Yes", "No"]),
           MyFormBuilderRadio(
               attribute: Keys.CVOID_19_RATION_RECEIVE,
               labelText: Keys.CVOID_19_RATION_RECEIVE,
-              options: [
-                "Yes", "No"
-              ]
-          ),
+              options: ["Yes", "No"]),
           MyFormBuilderRadio(
               attribute: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
               labelText: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
-              options: [
-                "Yes", "No"
-              ]
-          ),
+              options: ["Yes", "No"]),
         ],
       ),
     );

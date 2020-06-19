@@ -5,7 +5,6 @@ import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
 
 class PersonalDetailCard extends StatelessWidget {
-
   final GlobalKey<FormBuilderState> formKey;
 
   const PersonalDetailCard({Key key, this.formKey}) : super(key: key);
@@ -15,17 +14,15 @@ class PersonalDetailCard extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text(
-            "Social And Employment Eligibility"
-          ),
+          Text("Social And Employment Eligibility",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
 //          CustomYesNoSpecify(labelText: "Hello", attribute: "custom-yes-no", formKey: formKey,),
           MyFormBuilderDropdown(
-            attribute: Keys.STATE,
-            labelText: Keys.STATE,
-            // initialValue: 'Male',
-            hint: 'Select State',
-            items: ['Delhi', 'Bihar', 'Jharkhand']
-          ),
+              attribute: Keys.STATE,
+              labelText: Keys.STATE,
+              // initialValue: 'Male',
+              hint: 'Select State',
+              items: ['Delhi', 'Bihar', 'Jharkhand']),
           MyFormBuilderTextField(
             attribute: Keys.DISTRICT,
             labelText: Keys.DISTRICT,
