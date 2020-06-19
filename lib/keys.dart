@@ -14,9 +14,9 @@ class Keys {
   static const String CVOID_19_RATION_RECEIVE = "covid_19_ration_receive";
   static const String AYUSHMAN_OR_SWASTHYA_CARD = "ayushman_or_swasthya_card";
 
-  static const String HAVE_AADHAAR = "have_aadhaar";
-  static const String HAVE_PAN = "have_pan";
-  static const String HAVE_VOTER = "have_voter";
+//  static const String HAVE_AADHAAR = "have_aadhaar";
+//  static const String HAVE_PAN = "have_pan";
+//  static const String HAVE_VOTER = "have_voter";
 
   static const String STATE = "state";
   static const String DISTRICT = "district";
@@ -30,10 +30,10 @@ class Keys {
   static const String HAVE_AADHAR_CARD = "have_aadhar_card";
   static const String AADHAR_CARD_NO = "aadhar_card_no";
   static const String HAVING_SAVING_BANK_ACCOUNT = "having_saving_bank_account";
-  static const String JAN_DHAN_ACCOUNT = "JAN_DHAN_ACCOUNT";
+  static const String JAN_DHAN_ACCOUNT = "jan_dhan_account";
   static const String BANK_ACCT_LINK_WITH_AADHAR_CARD =
       "bank_acct_link_with_aadhar_card";
-  static const String KYC_VERIFY_FROM_BANK = "KYC_VERIFY_FROM_BANK";
+  static const String KYC_VERIFY_FROM_BANK = "kyc_verify_from_bank";
   static const String LINKED_WITH_PMSBY = "linked_with_pmsby";
   static const String LINKED_WITH_PMJJBY = "linked_with_pmjjby";
   static const String LINKED_WITH_SOCIAL_SECURITY_SCHEME =
@@ -41,7 +41,7 @@ class Keys {
   static const String SPECIFY_SOCIAL_SECURITY_SCHEME = "specify_social_scheme";
   static const String RECV_CASH_TRANSFER_DURING_COVID_19 =
       "recv_cash_transfer_during_covid_19";
-  static const String HAVING_VOTER_CARD = "HAVING_VOTER_CARD";
+  static const String HAVING_VOTER_CARD = "having_voter_card";
   static const String VOTER_ID_NMBR = "voter_id_nmbr";
   static const String HAVING_PAN_CARD = "having_pan_card";
   static const String SPECIFY_PAN_CARD_NO = "specify_pan_card_no";
@@ -54,7 +54,6 @@ class Keys {
   static const String GETTING_ANY_WINDOW_PENSION = "getting_any_window_pension";
 
 //FOR SKILL SCREEN
-  static const String SKILL = "skill";
   static const String CATEGORY_SKILL = "category_skill";
   static const String CERTI_RELATED_SKILL = "certificate_related_skill";
   static const String SPECIFY_YOUR_SKILL = "specify_your_skill";
@@ -102,7 +101,7 @@ class Keys {
   static const String SMALL_ENTERPRISE = "small_enterprise";
   static const String TYPE_OF_ENTERPRISE = "type_of_enterprise";
   static const String ENTERPRISE_NAME = "enterprise_name";
-  static const String UDYOG_AADHAR_CARD = "UDYOG_AADHAR_CARD";
+  static const String UDYOG_AADHAR_CARD = "udyog_aadhar_card";
   static const String BUSINESS_ON_SOCIAL_MEDIA = "business_on_social_media";
   static const String OWN_OR_RENT_SHOP = "own_or_rent_shop";
   static const String RENT_AGREEMENT = "rent_agreement";
@@ -115,13 +114,13 @@ class Keys {
   static const String REG_UNDER_SHOP_ESTAB_ACT = "reg_under_shop_estab_act";
   static const String RECIV_MUDRA_LOAN = "reciv_mudra_loan";
 
-  static const String AGRICULTURAL_LABR = "agriculture_labr";
+  static const String AGRICULTURAL_LABR = "agriculture_labour";
   static const String MGNREGA_JOB_CARD = "mgnrega_job_card";
   static const String WORK_UNDR_MGNREGA = "work_undr_mgnrega";
   static const String WORKING_DAYS_FOR_MGNREGA = "working_days_for_mgnrega";
   static const String GET_ANY_PAYMENT = "get_any_payment";
 
-  static const String CONSTRUCTION_WORKER = "construct_worker";
+  static const String CONSTRUCTION_WORKER = "construction_worker";
   static const String REG_WITH_WELFARE_BOARD = "reg_with_welfare_board";
   static const String LABOUR_ID_CARD = "labour_id_card";
   static const String RECV_AUZAAR_OR_OTHER_SCHEME =
@@ -140,7 +139,7 @@ class Keys {
   static const String RICKSHAW_PULLER = "rickshaw_puller";
   static const String OWNER_OF_YOUR_RICKSHAW = "owner_of_your_rickshaw";
 
-  static const String AUTO_RICKSHAW = "auto_rickshaw";
+  static const String AUTO_RICKSHAW = "auto_Rickshaw";
   static const String OWNER_OF_YOUR_AUTO_RICKSHAW =
       "owner_of_your_auto_rickshaw";
 
