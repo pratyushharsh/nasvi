@@ -143,7 +143,7 @@ class Keys {
   static const String OWNER_OF_YOUR_AUTO_RICKSHAW =
       "owner_of_your_auto_rickshaw";
 
-  static const String E_RICKSHAW = "e-rickshaw";
+  static const String E_RICKSHAW = "e_rickshaw";
   static const String OWNER_OF_YOUR_E_RICKSHAW = "owner_of_your_e_rickshaw";
   static const String REG_WITH_MUNUICIPAL_BODY = "reg_with_municipal_body";
   static const String LICENSE_MUNICIPAL_BODY = "license_municipal_body";

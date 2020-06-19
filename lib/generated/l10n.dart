@@ -43,11 +43,101 @@ class S {
     );
   }
 
+  /// `Nick Name`
+  String get nick_name {
+    return Intl.message(
+      'Nick Name',
+      name: 'nick_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Gender`
   String get gender {
     return Intl.message(
       'Gender',
       name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `State`
+  String get state {
+    return Intl.message(
+      'State',
+      name: 'state',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `District`
+  String get district {
+    return Intl.message(
+      'District',
+      name: 'district',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Block`
+  String get block {
+    return Intl.message(
+      'Block',
+      name: 'block',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Village`
+  String get village {
+    return Intl.message(
+      'Village',
+      name: 'village',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ward No`
+  String get ward_no {
+    return Intl.message(
+      'Ward No',
+      name: 'ward_no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pincode`
+  String get pincode {
+    return Intl.message(
+      'Pincode',
+      name: 'pincode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile`
+  String get mobile {
+    return Intl.message(
+      'Mobile',
+      name: 'mobile',
       desc: '',
       args: [],
     );
@@ -73,6 +163,26 @@ class S {
     );
   }
 
+  /// `Do you have Ration Card?`
+  String get ration_card {
+    return Intl.message(
+      'Do you have Ration Card?',
+      name: 'ration_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ration Card NO`
+  String get ration_card_no {
+    return Intl.message(
+      'Ration Card NO',
+      name: 'ration_card_no',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `During COVID-19,During the main campagin did you applied for E-ration/ration card?`
   String get covid_19_campion {
     return Intl.message(
@@ -88,6 +198,16 @@ class S {
     return Intl.message(
       'Recieve Ration during COVID-19',
       name: 'covid_19_ration_receive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have Ayushman card(Golden Card/Swasthya Card)?`
+  String get ayushman_or_swasthya_card {
+    return Intl.message(
+      'Do you have Ayushman card(Golden Card/Swasthya Card)?',
+      name: 'ayushman_or_swasthya_card',
       desc: '',
       args: [],
     );
@@ -124,10 +244,10 @@ class S {
   }
 
   /// `Do you have a Jan Dhan Account?`
-  String get JAN_DHAN_ACCOUNT {
+  String get jan_dhan_account {
     return Intl.message(
       'Do you have a Jan Dhan Account?',
-      name: 'JAN_DHAN_ACCOUNT',
+      name: 'jan_dhan_account',
       desc: '',
       args: [],
     );
@@ -144,10 +264,10 @@ class S {
   }
 
   /// `KYC verified from Bank?`
-  String get KYC_VERIFY_FROM_BANK {
+  String get kyc_verify_from_bank {
     return Intl.message(
       'KYC verified from Bank?',
-      name: 'KYC_VERIFY_FROM_BANK',
+      name: 'kyc_verify_from_bank',
       desc: '',
       args: [],
     );
@@ -204,10 +324,10 @@ class S {
   }
 
   /// `Do you have voter Card?`
-  String get HAVING_VOTER_CARD {
+  String get having_voter_card {
     return Intl.message(
       'Do you have voter Card?',
-      name: 'HAVING_VOTER_CARD',
+      name: 'having_voter_card',
       desc: '',
       args: [],
     );
@@ -464,10 +584,10 @@ class S {
   }
 
   /// `Do you have Udyog Aadhar Card?`
-  String get UDYOG_AADHAR_CARD {
+  String get udyog_aadhar_card {
     return Intl.message(
       'Do you have Udyog Aadhar Card?',
-      name: 'UDYOG_AADHAR_CARD',
+      name: 'udyog_aadhar_card',
       desc: '',
       args: [],
     );
@@ -748,6 +868,216 @@ class S {
     return Intl.message(
       'Do you have an Employment ID card',
       name: 'ww_employment_id_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domestic Worker`
+  String get domestic_worker {
+    return Intl.message(
+      'Domestic Worker',
+      name: 'domestic_worker',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have Identity card related to your work?`
+  String get work_related_id_card {
+    return Intl.message(
+      'Do you have Identity card related to your work?',
+      name: 'work_related_id_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If yes,who authorized it?`
+  String get work_id_card_authorization {
+    return Intl.message(
+      'If yes,who authorized it?',
+      name: 'work_id_card_authorization',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home Based Worker`
+  String get home_based_worker {
+    return Intl.message(
+      'Home Based Worker',
+      name: 'home_based_worker',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Peice Rate/Own Account Worker`
+  String get piece_rate_or_own_acct_workr {
+    return Intl.message(
+      'Peice Rate/Own Account Worker',
+      name: 'piece_rate_or_own_acct_workr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have an Artisian Card?`
+  String get artisian_card {
+    return Intl.message(
+      'Do you have an Artisian Card?',
+      name: 'artisian_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rickshaw Puller`
+  String get rickshaw_puller {
+    return Intl.message(
+      'Rickshaw Puller',
+      name: 'rickshaw_puller',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you owner of your Rickshaw?`
+  String get owner_of_your_rickshaw {
+    return Intl.message(
+      'Are you owner of your Rickshaw?',
+      name: 'owner_of_your_rickshaw',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Auto rickshaw`
+  String get auto_rickshaw {
+    return Intl.message(
+      'Auto rickshaw',
+      name: 'auto_rickshaw',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you owner of your Auto Rickshaw?,`
+  String get owner_of_your_auto_rickshaw {
+    return Intl.message(
+      'Are you owner of your Auto Rickshaw?,',
+      name: 'owner_of_your_auto_rickshaw',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `E-rickshaw`
+  String get e_rickshaw {
+    return Intl.message(
+      'E-rickshaw',
+      name: 'e_rickshaw',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you owner of your E-Rickshaw?`
+  String get owner_of_your_e_rickshaw {
+    return Intl.message(
+      'Are you owner of your E-Rickshaw?',
+      name: 'owner_of_your_e_rickshaw',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registered with any municipal Body`
+  String get reg_with_municipal_body {
+    return Intl.message(
+      'Registered with any municipal Body',
+      name: 'reg_with_municipal_body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `License from municipal Body?`
+  String get license_municipal_body {
+    return Intl.message(
+      'License from municipal Body?',
+      name: 'license_municipal_body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Private Job`
+  String get private_job {
+    return Intl.message(
+      'Private Job',
+      name: 'private_job',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have an employment Identity card`
+  String get emp_id_card {
+    return Intl.message(
+      'Do you have an employment Identity card',
+      name: 'emp_id_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you get an honorarium/salary on time?`
+  String get honorarium_salary_on_time {
+    return Intl.message(
+      'Do you get an honorarium/salary on time?',
+      name: 'honorarium_salary_on_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you registered with Your Provident fund(PF)`
+  String get reg_with_pf {
+    return Intl.message(
+      'Are you registered with Your Provident fund(PF)',
+      name: 'reg_with_pf',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you registered with ESIC(Employees' State Insurance)?`
+  String get reg_with_esic {
+    return Intl.message(
+      'Are you registered with ESIC(Employees\' State Insurance)?',
+      name: 'reg_with_esic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Others`
+  String get others {
+    return Intl.message(
+      'Others',
+      name: 'others',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Detail Of Your Occupation`
+  String get detail_of_your_occupation {
+    return Intl.message(
+      'Detail Of Your Occupation',
+      name: 'detail_of_your_occupation',
       desc: '',
       args: [],
     );
