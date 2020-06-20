@@ -9,12 +9,13 @@ class MyFormBuilderRadio extends StatelessWidget {
   final String labelText;
   final String attribute;
   final List<String> options;
+  final List<FormFieldValidator> validators;
 
   MyFormBuilderRadio(
       {Key key,
       @required this.labelText,
       @required this.attribute,
-      @required this.options})
+      @required this.options, this.validators = const []})
       : super(key: key);
 
   @override
@@ -31,6 +32,7 @@ class MyFormBuilderRadio extends StatelessWidget {
                 child: Text(Intl.message(labelText), style: TextStyle(fontWeight: FontWeight.bold),),
               ),
               FormBuilderRadio(
+                validators: validators,
                 decoration: InputDecoration(border: InputBorder.none),
                 attribute: attribute,
                 options: options
@@ -51,8 +53,9 @@ class MyFormBuilderRadio extends StatelessWidget {
 class MyFormBuilderTextField extends StatelessWidget {
   final String attribute;
   final String labelText;
+  final List<FormFieldValidator> validators;
 
-  MyFormBuilderTextField({Key key, this.attribute, this.labelText})
+  MyFormBuilderTextField({Key key, this.attribute, this.labelText, this.validators = const []})
       : super(key: key);
 
   @override
@@ -61,6 +64,7 @@ class MyFormBuilderTextField extends StatelessWidget {
       child: Card(
         margin: EdgeInsets.all(6),
         child: FormBuilderTextField(
+          validators: validators,
           attribute: attribute,
           decoration: InputDecoration(
               labelText: Intl.message(labelText), border: OutlineInputBorder()),
@@ -76,6 +80,7 @@ class MyFormBuilderDropdown extends StatelessWidget {
   final List<String> items;
   final String hint;
   final ValueChanged onChanged;
+  final List<FormFieldValidator> validators;
 
   const MyFormBuilderDropdown(
       {Key key,
@@ -83,7 +88,7 @@ class MyFormBuilderDropdown extends StatelessWidget {
       this.labelText,
       @required this.items,
       this.hint,
-      this.onChanged})
+      this.onChanged, this.validators = const []})
       : super(key: key);
 
   @override
@@ -97,7 +102,7 @@ class MyFormBuilderDropdown extends StatelessWidget {
             labelText: Intl.message(labelText), border: OutlineInputBorder()),
         // initialValue: 'Male',
         hint: hint != null ? Text(hint) : null,
-        validators: [FormBuilderValidators.required()],
+        validators: [FormBuilderValidators.required(), ...validators],
         items: items
             .map((s) => DropdownMenuItem(value: s, child: Text(s != null ? Intl.message(s) : "")))
             .toList(),
