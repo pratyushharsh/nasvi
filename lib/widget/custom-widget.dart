@@ -110,9 +110,12 @@ class CustomYesNoSpecify extends StatefulWidget {
   final GlobalKey<FormBuilderState> formKey;
   final String attribute;
   final String labelText;
+  final List<FormFieldValidator> validators;
+  final String yesLabelText;
+  final TextInputType keyboardType;
 
   const CustomYesNoSpecify(
-      {Key key, this.attribute, this.labelText, this.formKey})
+      {Key key, this.attribute, this.labelText, this.formKey, this.validators = const [], this.yesLabelText, this.keyboardType})
       : super(key: key);
 
   @override
@@ -161,9 +164,10 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
               ),
               curVal != null && curVal == Keys.YES
                   ? FormBuilderTextField(
+                keyboardType: widget.keyboardType,
                       attribute: "${widget.labelText}-specify",
                       decoration: InputDecoration(
-                          labelText: "If Other, please specify",
+                          labelText: widget.yesLabelText,
                           border: InputBorder.none),
                       validators: [
                         (val) {
@@ -171,9 +175,10 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
                                       .currentState.value ==
                                   Keys.YES &&
                               (val == null || val.isEmpty))
-                            return "Kindly specify your language";
+                            return "Field is required.";
                           return null;
                         },
+                        ...widget.validators
                       ],
                     )
                   : Container()

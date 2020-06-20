@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:nasvi/bloc/theme/theme_bloc.dart';
+import 'package:nasvi/bloc/theme/theme_event.dart';
 import 'package:nasvi/bloc/worker/bloc.dart';
 import 'package:nasvi/config/router.dart';
+import 'package:nasvi/generated/l10n.dart';
 import 'package:nasvi/screens/screen.dart';
 import 'package:nasvi/screens/social-security.dart';
 
@@ -76,9 +79,21 @@ class _UserFormState extends State<UserForm> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.language),
-          ),
+//          PopupMenuButton<Locale>(
+//            icon: Icon(Icons.g_translate),
+//            onSelected: (val) {
+//              BlocProvider.of<ThemeBloc>(context)
+//                  .add(ChangeLocale(locale: val));
+//            },
+//            itemBuilder: (BuildContext context) {
+//              return S.delegate.supportedLocales.map((e) {
+//                return PopupMenuItem<Locale>(
+//                  value: e,
+//                  child: Text(e.languageCode),
+//                );
+//              }).toList();
+//            },
+//          ),
           IconButton(
             icon: Icon(Icons.minimize)
           ),

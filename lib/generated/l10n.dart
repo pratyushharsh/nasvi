@@ -724,10 +724,10 @@ class S {
   }
 
   /// `Small Framer`
-  String get farmer {
+  String get small_farmer {
     return Intl.message(
       'Small Framer',
-      name: 'farmer',
+      name: 'small_farmer',
       desc: '',
       args: [],
     );
@@ -973,10 +973,10 @@ class S {
     );
   }
 
-  /// `Auto rickshaw`
+  /// `Auto Rickshaw`
   String get auto_rickshaw {
     return Intl.message(
-      'Auto rickshaw',
+      'Auto Rickshaw',
       name: 'auto_rickshaw',
       desc: '',
       args: [],
@@ -1098,6 +1098,46 @@ class S {
     return Intl.message(
       'Detail Of Your Occupation',
       name: 'detail_of_your_occupation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skill`
+  String get skill {
+    return Intl.message(
+      'Skill',
+      name: 'skill',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `NA`
+  String get na {
+    return Intl.message(
+      'NA',
+      name: 'na',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Others`
+  String get other {
+    return Intl.message(
+      'Others',
+      name: 'other',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social Security Information`
+  String get social_security_information {
+    return Intl.message(
+      'Social Security Information',
+      name: 'social_security_information',
       desc: '',
       args: [],
     );

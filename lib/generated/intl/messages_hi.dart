@@ -48,7 +48,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "e_rickshaw" : MessageLookupByLibrary.simpleMessage("ई रिक्शा"),
     "emp_id_card" : MessageLookupByLibrary.simpleMessage("क्या आपके पास रोजगार पहचान पत्र है"),
     "enterprise_name" : MessageLookupByLibrary.simpleMessage("क्या आपके उद्यम का कोई नाम है?"),
-    "farmer" : MessageLookupByLibrary.simpleMessage("छोटा फ्रेमर"),
     "fm_kisan_credit_card" : MessageLookupByLibrary.simpleMessage("क्या आपके पास किसान क्रेडिट कार्ड है?"),
     "fm_kisan_pention_yojna" : MessageLookupByLibrary.simpleMessage("क्या आपको किसान पेंशन योजना मिलती है?"),
     "fm_pm_ksny" : MessageLookupByLibrary.simpleMessage("क्या आपको पीएम किसान सम्मान निधि योजना से लाभ मिला है?"),
