@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -10,7 +11,7 @@ class Other extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Other"),
+          Text(Intl.message(Keys.OTHERS)),
           MyFormBuilderTextField(
             attribute: Keys.DETAIL_OF_YOUR_OCCUPATION,
             labelText: Keys.DETAIL_OF_YOUR_OCCUPATION,

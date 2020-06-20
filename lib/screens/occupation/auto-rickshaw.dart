@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -10,7 +11,7 @@ class AutoRickshaw extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Auto RICKSHAW"),
+          Text(Intl.message(Keys.AUTO_RICKSHAW)),
           MyFormBuilderTextField(
             attribute: Keys.OWNER_OF_YOUR_AUTO_RICKSHAW,
             labelText: Keys.OWNER_OF_YOUR_AUTO_RICKSHAW,

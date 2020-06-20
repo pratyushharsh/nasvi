@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -10,7 +11,7 @@ class HomeBasedWorker extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Home  Based Worker"),
+          Text(Intl.message(Keys.HOME_BASED_WORKER)),
           MyFormBuilderTextField(
               attribute: Keys.PIECE_RATE_OR_OWN_ACCT_WORKR,
               labelText: Keys.PIECE_RATE_OR_OWN_ACCT_WORKR,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -8,7 +9,7 @@ class StreetVendor extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Rehdi Patri /Street Vendor"),
+          Text(Intl.message(Keys.STREET_VENDOR_OR_REHDI_PATRI)),
           MyFormBuilderRadio(
               attribute: Keys.IS_SURVEY_DONE,
               labelText: Keys.IS_SURVEY_DONE,

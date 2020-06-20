@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -8,20 +9,16 @@ class WasteWorker extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Waste Worker"),
+          Text(Intl.message(Keys.WASTE_WORKER)),
           MyFormBuilderRadio(
             attribute: Keys.WW_NAGAR_NIGAM_LINKED,
             labelText: Keys.WW_NAGAR_NIGAM_LINKED,
-            options: [
-              "Yes", "No"
-            ]
+            options: Keys.YES_NO
           ),
           MyFormBuilderRadio(
             attribute: Keys.WW_EMPLOYMENT_ID_CARD,
             labelText: Keys.WW_EMPLOYMENT_ID_CARD,
-            options: [
-              "Yes", "No"
-            ]
+            options: Keys.YES_NO
           ),
         ],
       ),

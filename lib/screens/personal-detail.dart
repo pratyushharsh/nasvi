@@ -1,52 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
 
-class PersonalDetailCard extends StatelessWidget {
-  final GlobalKey<FormBuilderState> formKey;
+import '../keys.dart';
 
-  const PersonalDetailCard({Key key, this.formKey}) : super(key: key);
-
+class PersonalDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Social And Employment Eligibility",
+          Text("Personal Detail",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-//          CustomYesNoSpecify(labelText: "Hello", attribute: "custom-yes-no", formKey: formKey,),
-          MyFormBuilderDropdown(
-              attribute: Keys.STATE,
-              labelText: Keys.STATE,
-              // initialValue: 'Male',
-              hint: 'Select State',
-              items: ['Delhi', 'Bihar', 'Jharkhand']),
           MyFormBuilderTextField(
-            attribute: Keys.DISTRICT,
-            labelText: Keys.DISTRICT,
+            attribute: Keys.NAME,
+            labelText: Keys.NAME,
           ),
           MyFormBuilderTextField(
-            attribute: Keys.BLOCK,
-            labelText: Keys.BLOCK,
+            attribute: Keys.NICK_NAME,
+            labelText: Keys.NICK_NAME,
           ),
           MyFormBuilderTextField(
-            attribute: Keys.VILLAGE,
-            labelText: Keys.VILLAGE,
+            attribute: Keys.AGE,
+            labelText: Keys.AGE,
           ),
+          MyFormBuilderRadio(
+              attribute: Keys.GENDER,
+              labelText: Keys.GENDER,
+              options: Keys.YES_NO_OTHERS),
+          MyFormBuilderRadio(
+              attribute: Keys.APL_CATEGORY,
+              labelText: Keys.APL_CATEGORY,
+              options:Keys.YES_NO),
+          MyFormBuilderRadio(
+              attribute: Keys.BPL_CATEGORY,
+              labelText: Keys.BPL_CATEGORY,
+              options:Keys.YES_NO),
+          MyFormBuilderRadio(
+              attribute: Keys.RATION_CARD,
+              labelText: Keys.RATION_CARD,
+              options:Keys.YES_NO),
           MyFormBuilderTextField(
-            attribute: Keys.WARD_NO,
-            labelText: Keys.WARD_NO,
+            attribute: Keys.RATION_CARD_NO,
+            labelText: Keys.RATION_CARD_NO,
           ),
-          MyFormBuilderTextField(
-            attribute: Keys.POSTAL_CODE,
-            labelText: Keys.POSTAL_CODE,
-          ),
-          MyFormBuilderTextField(
-            attribute: Keys.MOBILE,
-            labelText: Keys.MOBILE,
-          ),
+          MyFormBuilderRadio(
+              attribute: Keys.CVOID_19_CAMPION,
+              labelText: Keys.CVOID_19_CAMPION,
+              options:Keys.YES_NO),
+          MyFormBuilderRadio(
+              attribute: Keys.CVOID_19_RATION_RECEIVE,
+              labelText: Keys.CVOID_19_RATION_RECEIVE,
+              options:Keys.YES_NO),
+          MyFormBuilderRadio(
+              attribute: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
+              labelText: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
+              options:Keys.YES_NO),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -8,7 +9,7 @@ class SmallEnterrise extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Small Enterprise"),
+          Text(Intl.message(Keys.AGRICULTURAL_LABR)),
           MyFormBuilderRadio(
               attribute: Keys.TYPE_OF_ENTERPRISE,
               labelText: Keys.TYPE_OF_ENTERPRISE,

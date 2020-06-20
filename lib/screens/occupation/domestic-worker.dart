@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -8,7 +9,7 @@ class DomesticWorker extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Domestic Worker"),
+          Text(Intl.message(Keys.DOMESTIC_WORKER)),
           MyFormBuilderRadio(
               attribute: Keys.WORK_RELATED_ID_CARD,
               labelText: Keys.WORK_RELATED_ID_CARD,

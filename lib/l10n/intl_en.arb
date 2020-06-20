@@ -69,7 +69,7 @@
 	"income_tax_return": "Do you file Income Tax return?",
 	"reg_under_shop_estab_act": "Registered under Shop Establishment Act",
 	"reciv_mudra_loan": "Have you recieved Mudra Loan",
-	"farmer": "Small Framer",
+	"small_farmer": "Small Framer",
 	"fm_kisan_credit_card": "Do you have Kisan Credit card?",
 	"fm_pm_ksny": "Have you received benefits from PM Kisan Samman Nidhi Yojna?",
 	"fm_kisan_pention_yojna": "Do you get Kisan Pension Yojna?",
@@ -94,7 +94,7 @@
 	"artisian_card": "Do you have an Artisian Card?",
 	"rickshaw_puller": "Rickshaw Puller",
 	"owner_of_your_rickshaw": "Are you owner of your Rickshaw Puller?",
-	"auto_rickshaw": "Auto rickshaw",
+	"auto_rickshaw": "Auto Rickshaw",
 	"owner_of_your_auto_rickshaw": "Are you owner of your Auto Rickshaw?",
 	"e_rickshaw": "E Rickshaw",
 	"owner_of_your_e_rickshaw": "Are you owner of your E-Rickshaw?",
@@ -106,5 +106,9 @@
 	"reg_with_pf": "Are you registered with Your Provident fund(PF)",
 	"reg_with_esic": "Are you registered with ESIC(Employees' State Insurance)?",
 	"others": "Others",
-	"detail_of_your_occupation": "Detail Of Your Occupation"
+	"detail_of_your_occupation": "Detail Of Your Occupation",
+	"skill":"Skill",
+	"na":"NA",
+	"other":"Others",
+	"social_security_information":"Social Security Information"
 }

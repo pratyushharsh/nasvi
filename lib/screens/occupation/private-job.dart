@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -8,7 +9,7 @@ class PrivateJob extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Private Job"),
+          Text(Intl.message(Keys.PRIVATE_JOB)),
           MyFormBuilderRadio(
               attribute: Keys.EMP_ID_CARD,
               labelText: Keys.EMP_ID_CARD,

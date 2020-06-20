@@ -4,7 +4,7 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:nasvi/bloc/worker/bloc.dart';
 import 'package:nasvi/config/router.dart';
 import 'package:nasvi/screens/screen.dart';
-import 'package:nasvi/screens/social-security2.dart';
+import 'package:nasvi/screens/social-security.dart';
 
 class UserForm extends StatefulWidget {
   @override

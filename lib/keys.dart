@@ -1,6 +1,11 @@
 class Keys {
   static const String YES = "yes";
   static const String NO = "no";
+  static const String NA = "na";
+  static const String OTHERSS = "other";
+  static const List<String> YES_NO = [YES, NO];
+  static const List<String> YES_NO_OTHERS = [YES, NO, OTHERSS];
+  static const List<String> YES_NO_NA = [YES, NO, NA];
 
   static const String NAME = "name";
   static const String NICK_NAME = "nick_name";
@@ -14,10 +19,9 @@ class Keys {
   static const String CVOID_19_RATION_RECEIVE = "covid_19_ration_receive";
   static const String AYUSHMAN_OR_SWASTHYA_CARD = "ayushman_or_swasthya_card";
 
-//  static const String HAVE_AADHAAR = "have_aadhaar";
-//  static const String HAVE_PAN = "have_pan";
-//  static const String HAVE_VOTER = "have_voter";
-
+//Personal screen
+  static const String PERSONAL_DETAIL = "personal_detail";
+  static const String SOCIAL_AND_EMPLOYMENT_ELIGIBILITY = "social_and_employment_eligibility";
   static const String STATE = "state";
   static const String DISTRICT = "district";
   static const String BLOCK = "block";
@@ -27,6 +31,7 @@ class Keys {
   static const String MOBILE = "mobile";
 
 //FOR SOCIAL SECURITY INFORMATION SCREEN
+  static const String SOCIAL_SECURITY_INFORMATION = "social_security_information";
   static const String HAVE_AADHAR_CARD = "have_aadhar_card";
   static const String AADHAR_CARD_NO = "aadhar_card_no";
   static const String HAVING_SAVING_BANK_ACCOUNT = "having_saving_bank_account";
@@ -54,6 +59,7 @@ class Keys {
   static const String GETTING_ANY_WINDOW_PENSION = "getting_any_window_pension";
 
 //FOR SKILL SCREEN
+  static const String SKILL = "skill";
   static const String CATEGORY_SKILL = "category_skill";
   static const String CERTI_RELATED_SKILL = "certificate_related_skill";
   static const String SPECIFY_YOUR_SKILL = "specify_your_skill";
@@ -83,7 +89,7 @@ class Keys {
   static const String WW_NAGAR_NIGAM_LINKED = "ww_nagar_nigam_linked";
   static const String WW_EMPLOYMENT_ID_CARD = "ww_employment_id_card";
 
-  static const String FARMER = "farmer";
+  static const String FARMER = "small_farmer";
   static const String FM_KCC = "fm_kisan_credit_card";
   static const String FM_PM_KSNY = "fm_pm_ksny";
   static const String FM_KPY = "fm_kisan_pention_yojna";

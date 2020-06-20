@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
@@ -15,7 +16,7 @@ class Skill extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-            "Skill",
+            Intl.message(Keys.SKILL),
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
 //          CustomYesNoSpecify(labelText: "Hello", attribute: "custom-yes-no", formKey: formKey,),
@@ -32,7 +33,7 @@ class Skill extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.CERTI_RELATED_SKILL,
               labelText: Keys.CERTI_RELATED_SKILL,
-              options: ["Yes", "No"]),
+              options: Keys.YES_NO),
           MyFormBuilderTextField(
             attribute: Keys.SPECIFY_YOUR_SKILL,
             labelText: Keys.SPECIFY_YOUR_SKILL,
@@ -40,7 +41,7 @@ class Skill extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.PARTICULAR_SKILL_REQ,
               labelText: Keys.PARTICULAR_SKILL_REQ,
-              options: ["Yes", "No"]),
+              options: Keys.YES_NO),
           MyFormBuilderTextField(
             attribute: Keys.SPECIFY_YOUR_SKILL_TRAIN_REQ,
             labelText: Keys.SPECIFY_YOUR_SKILL_TRAIN_REQ,
