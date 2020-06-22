@@ -21,13 +21,19 @@ class Validator {
       r'^([0-9]{9})(X|V)$'
   );
   static final RegExp _postalcodeValidator = RegExp(
-      r'^\\d{6}$'
+      r'^([0-9]{6})$'
   );
   static final RegExp _rationcardValidator = RegExp(
       r'$^([a-zA-Z0-9]){8,12}\s*'
   );
+  static final RegExp _ageValidator = RegExp(
+      r'(?:\b|-)([1-9]{1,2}[0]?|100)\b'
+  );
   static final RegExp _name = RegExp(
       r'(^[a-zA-Z]*$)'
+  );
+  static final RegExp _mobilenumberValidator = RegExp(
+      r'^[0][1-9]\d{9}$|^[1-9]\d{9}$'
   );
 
   static isValidEmail(String email) {
@@ -57,6 +63,12 @@ class Validator {
   }
   static isValidRationCard(String ration) {
     return _rationcardValidator.hasMatch(ration);
+  }
+  static isValidMobileNo(String mobile) {
+    return _mobilenumberValidator.hasMatch(mobile);
+  }
+  static isValidAge(String age) {
+    return _ageValidator.hasMatch(age);
   }
 
   static isValidName(String name) {

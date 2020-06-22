@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
+import 'package:nasvi/config/validator.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
@@ -30,22 +31,54 @@ class Skill extends StatelessWidget {
                 'Highly-Skilled',
                 'Unskilled'
               ]),
-          MyFormBuilderRadio(
-              attribute: Keys.CERTI_RELATED_SKILL,
-              labelText: Keys.CERTI_RELATED_SKILL,
-              options: Keys.YES_NO),
-          MyFormBuilderTextField(
-            attribute: Keys.SPECIFY_YOUR_SKILL,
-            labelText: Keys.SPECIFY_YOUR_SKILL,
+          CustomYesNoSpecify(
+            labelText: Keys.CERTI_RELATED_SKILL,
+            attribute: Keys.CERTI_RELATED_SKILL,
+            formKey: formKey,
+            keyboardType: TextInputType.text,
+            validators: [
+                  (val) {
+                if (Validator.isValidName(val)) {
+                  return null;
+                } else {
+                  return "specify your Skill";
+                }
+              }
+            ],
+            yesLabelText: "if Yes then specify your Skill ",
           ),
-          MyFormBuilderRadio(
-              attribute: Keys.PARTICULAR_SKILL_REQ,
-              labelText: Keys.PARTICULAR_SKILL_REQ,
-              options: Keys.YES_NO),
-          MyFormBuilderTextField(
-            attribute: Keys.SPECIFY_YOUR_SKILL_TRAIN_REQ,
-            labelText: Keys.SPECIFY_YOUR_SKILL_TRAIN_REQ,
+//          MyFormBuilderRadio(
+//              attribute: Keys.CERTI_RELATED_SKILL,
+//              labelText: Keys.CERTI_RELATED_SKILL,
+//              options: Keys.YES_NO),
+//          MyFormBuilderTextField(
+//            attribute: Keys.SPECIFY_YOUR_SKILL,
+//            labelText: Keys.SPECIFY_YOUR_SKILL,
+//          ),
+          CustomYesNoSpecify(
+            labelText: Keys.PARTICULAR_SKILL_REQ,
+            attribute: Keys.PARTICULAR_SKILL_REQ,
+            formKey: formKey,
+            keyboardType: TextInputType.text,
+            validators: [
+                  (val) {
+                if (Validator.isValidName(val)) {
+                  return null;
+                } else {
+                  return "specify your Skill";
+                }
+              }
+            ],
+            yesLabelText: "if Yes then specify Skill training required ",
           ),
+//          MyFormBuilderRadio(
+//              attribute: Keys.PARTICULAR_SKILL_REQ,
+//              labelText: Keys.PARTICULAR_SKILL_REQ,
+//              options: Keys.YES_NO),
+//          MyFormBuilderTextField(
+//            attribute: Keys.SPECIFY_YOUR_SKILL_TRAIN_REQ,
+//            labelText: Keys.SPECIFY_YOUR_SKILL_TRAIN_REQ,
+//          ),
         ],
       ),
     );

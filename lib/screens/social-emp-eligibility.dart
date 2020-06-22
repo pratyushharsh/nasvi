@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:nasvi/config/validator.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
@@ -45,11 +46,30 @@ class PersonalDetailCard extends StatelessWidget {
           MyFormBuilderTextField(
             attribute: Keys.POSTAL_CODE,
             labelText: Keys.POSTAL_CODE,
+            keyboardType: TextInputType.number,
+            validators: [
+                  (val) {
+                if (Validator.isValidPostalCode(val)) {
+                  return null;
+                } else {
+                  return "Enter valid Postal code";
+                }
+              }
+            ],
           ),
           MyFormBuilderTextField(
             attribute: Keys.MOBILE,
             labelText: Keys.MOBILE,
-              validators:[ FormBuilderValidators.required()]
+              keyboardType: TextInputType.number,
+            validators: [
+                  (val) {
+                if (Validator.isValidMobileNo(val)) {
+                  return null;
+                } else {
+                  return "Enter valid Mobile No";
+                }
+              }
+            ],
           ),
         ],
       ),

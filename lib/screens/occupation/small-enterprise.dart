@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
+import 'package:nasvi/config/validator.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
@@ -57,15 +58,31 @@ class SmallEnterrise extends StatelessWidget {
               options: Keys.YES_NO,
             validators: [FormBuilderValidators.required()],
           ),
-          MyFormBuilderRadio(
-              attribute: Keys.ANY_SKILL_OR_TRAINING,
-              labelText: Keys.ANY_SKILL_OR_TRAINING,
-              options: Keys.YES_NO
+          CustomYesNoSpecify(
+            labelText: Keys.ANY_SKILL_OR_TRAINING,
+            attribute: Keys.ANY_SKILL_OR_TRAINING,
+            formKey: formKey,
+            keyboardType: TextInputType.text,
+            validators: [
+                  (val) {
+                if (Validator.isValidName(val)) {
+                  return null;
+                } else {
+                  return "specify your Skill required";
+                }
+              }
+            ],
+            yesLabelText: "if Yes then specify  ",
           ),
-          MyFormBuilderTextField(
-            attribute: Keys.SPECIFY_SKILL_TRAINING,
-            labelText: Keys.SPECIFY_SKILL_TRAINING,
-          ),
+//          MyFormBuilderRadio(
+//              attribute: Keys.ANY_SKILL_OR_TRAINING,
+//              labelText: Keys.ANY_SKILL_OR_TRAINING,
+//              options: Keys.YES_NO
+//          ),
+//          MyFormBuilderTextField(
+//            attribute: Keys.SPECIFY_SKILL_TRAINING,
+//            labelText: Keys.SPECIFY_SKILL_TRAINING,
+//          ),
           MyFormBuilderRadio(
               attribute: Keys.PROJECT_REPORT_BUSINESS,
               labelText: Keys.PROJECT_REPORT_BUSINESS,

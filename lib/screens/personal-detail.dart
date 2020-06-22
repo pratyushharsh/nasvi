@@ -30,7 +30,15 @@ class PersonalDetail extends StatelessWidget {
               attribute: Keys.AGE,
               labelText: Keys.AGE,
               keyboardType: TextInputType.number,
-              validators: [FormBuilderValidators.required()]),
+            validators: [
+                  (val) {
+                if (Validator.isValidAge(val)) {
+                  return null;
+                } else {
+                  return "Enter Age";
+                }
+              }
+            ],),
           MyFormBuilderRadio(
               attribute: Keys.GENDER,
               labelText: Keys.GENDER,
