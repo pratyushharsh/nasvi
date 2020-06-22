@@ -185,7 +185,7 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
                             return "Field is required.";
                           return null;
                         },
-                        ...widget.validators
+                        if (widget.validators != null) ...widget.validators
                       ],
                     )
                   : Container()

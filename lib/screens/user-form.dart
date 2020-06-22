@@ -23,13 +23,13 @@ class _UserFormState extends State<UserForm> {
         formKey: _fbKey,
       );
     } else if (count == 1) {
-      return PersonalDetail();
+      return PersonalDetail(formKey: _fbKey,);
     }
     else if (count == 2) {
       return SocialSecurity(formKey: _fbKey,);
     }
     else if (count == 3) {
-      return Skill();
+      return Skill(formKey: _fbKey,);
     }
     else if (count == 4) {
       return Occupation(
