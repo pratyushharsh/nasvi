@@ -5,7 +5,6 @@ import 'package:nasvi/bloc/theme/theme_bloc.dart';
 import 'package:nasvi/bloc/theme/theme_event.dart';
 import 'package:nasvi/bloc/worker/bloc.dart';
 import 'package:nasvi/config/router.dart';
-import 'package:nasvi/generated/l10n.dart';
 import 'package:nasvi/screens/screen.dart';
 import 'package:nasvi/screens/social-security.dart';
 

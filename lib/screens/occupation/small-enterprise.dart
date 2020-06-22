@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
 
 class SmallEnterrise extends StatelessWidget {
+  final GlobalKey<FormBuilderState> formKey;
+
+  const SmallEnterrise({Key key, this.formKey}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MyCustomCard(
@@ -20,51 +24,43 @@ class SmallEnterrise extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.ENTERPRISE_NAME,
               labelText: Keys.ENTERPRISE_NAME,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+              validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.UDYOG_AADHAR_CARD,
               labelText: Keys.UDYOG_AADHAR_CARD,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.BUSINESS_ON_SOCIAL_MEDIA,
               labelText: Keys.BUSINESS_ON_SOCIAL_MEDIA,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.OWN_OR_RENT_SHOP,
               labelText: Keys.OWN_OR_RENT_SHOP,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.RENT_AGREEMENT,
               labelText: Keys.RENT_AGREEMENT,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.TRAINING_ON_SOCL_MEDIA,
               labelText: Keys.TRAINING_ON_SOCL_MEDIA,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.ANY_SKILL_OR_TRAINING,
               labelText: Keys.ANY_SKILL_OR_TRAINING,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO
           ),
           MyFormBuilderTextField(
             attribute: Keys.SPECIFY_SKILL_TRAINING,
@@ -73,37 +69,32 @@ class SmallEnterrise extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.PROJECT_REPORT_BUSINESS,
               labelText: Keys.PROJECT_REPORT_BUSINESS,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.BAL_SHEET_OF_ENTERPRISE,
               labelText: Keys.BAL_SHEET_OF_ENTERPRISE,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+              validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.REG_UNDER_SHOP_ESTAB_ACT,
               labelText: Keys.REG_UNDER_SHOP_ESTAB_ACT,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.BAL_SHEET_OF_ENTERPRISE,
               labelText: Keys.BAL_SHEET_OF_ENTERPRISE,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.RECIV_MUDRA_LOAN,
               labelText: Keys.RECIV_MUDRA_LOAN,
-              options: [
-                "Yes", "No"
-              ]
+              options:Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
         ],
       ),

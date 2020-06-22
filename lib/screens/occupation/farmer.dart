@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
@@ -13,16 +14,14 @@ class Farmer extends StatelessWidget {
           MyFormBuilderRadio(
             attribute: Keys.FM_KCC,
             labelText: Keys.FM_KCC,
-            options: [
-              "Yes", "No"
-            ]
+            options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
             attribute: Keys.FM_PM_KSNY,
             labelText: Keys.FM_PM_KSNY,
-            options: [
-              "Yes", "No"
-            ]
+            options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
         ],
       ),

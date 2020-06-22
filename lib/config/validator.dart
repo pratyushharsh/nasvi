@@ -17,6 +17,18 @@ class Validator {
   static final RegExp _aadhaarCardValidator = RegExp(
     r'^[0-9]{12}$'
   );
+  static final RegExp _voterCardValidator = RegExp(
+      r'^([0-9]{9})(X|V)$'
+  );
+  static final RegExp _postalcodeValidator = RegExp(
+      r'^\\d{6}$'
+  );
+  static final RegExp _rationcardValidator = RegExp(
+      r'$^([a-zA-Z0-9]){8,12}\s*'
+  );
+  static final RegExp _name = RegExp(
+      r'(^[a-zA-Z]*$)'
+  );
 
   static isValidEmail(String email) {
     return _emailRegExp.hasMatch(email);
@@ -36,5 +48,18 @@ class Validator {
 
   static isValidAadhaarCard(String aadhaar) {
     return _aadhaarCardValidator.hasMatch(aadhaar);
+  }
+  static isValidVoterCard(String voter) {
+    return _voterCardValidator.hasMatch(voter);
+  }
+  static isValidPostalCode(String postal) {
+    return _postalcodeValidator.hasMatch(postal);
+  }
+  static isValidRationCard(String ration) {
+    return _rationcardValidator.hasMatch(ration);
+  }
+
+  static isValidName(String name) {
+    return _name.hasMatch(name);
   }
 }

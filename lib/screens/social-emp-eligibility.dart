@@ -30,14 +30,17 @@ class PersonalDetailCard extends StatelessWidget {
           MyFormBuilderTextField(
             attribute: Keys.BLOCK,
             labelText: Keys.BLOCK,
+            validators:[ FormBuilderValidators.required()]
           ),
           MyFormBuilderTextField(
             attribute: Keys.VILLAGE,
             labelText: Keys.VILLAGE,
+              validators:[ FormBuilderValidators.required()]
           ),
           MyFormBuilderTextField(
             attribute: Keys.WARD_NO,
             labelText: Keys.WARD_NO,
+              validators:[ FormBuilderValidators.required()]
           ),
           MyFormBuilderTextField(
             attribute: Keys.POSTAL_CODE,
@@ -46,6 +49,7 @@ class PersonalDetailCard extends StatelessWidget {
           MyFormBuilderTextField(
             attribute: Keys.MOBILE,
             labelText: Keys.MOBILE,
+              validators:[ FormBuilderValidators.required()]
           ),
         ],
       ),

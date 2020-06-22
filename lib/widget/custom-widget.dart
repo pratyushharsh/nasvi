@@ -54,8 +54,9 @@ class MyFormBuilderTextField extends StatelessWidget {
   final String attribute;
   final String labelText;
   final List<FormFieldValidator> validators;
+  final TextInputType keyboardType;
 
-  MyFormBuilderTextField({Key key, this.attribute, this.labelText, this.validators = const []})
+  MyFormBuilderTextField({Key key, this.attribute, this.labelText, this.validators = const [], this.keyboardType})
       : super(key: key);
 
   @override
@@ -66,6 +67,7 @@ class MyFormBuilderTextField extends StatelessWidget {
         child: FormBuilderTextField(
           validators: validators,
           attribute: attribute,
+            keyboardType: keyboardType,
           decoration: InputDecoration(
               labelText: Intl.message(labelText), border: OutlineInputBorder()),
         ),

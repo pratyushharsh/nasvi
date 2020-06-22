@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/widget.dart';
@@ -13,9 +14,8 @@ class DomesticWorker extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.WORK_RELATED_ID_CARD,
               labelText: Keys.WORK_RELATED_ID_CARD,
-              options: [
-                "Yes", "No"
-              ]
+              options: Keys.YES_NO,
+            validators: [FormBuilderValidators.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.WORK_ID_CARD_AUTHRIZATION,
