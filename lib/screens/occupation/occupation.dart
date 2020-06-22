@@ -15,14 +15,23 @@ import 'package:nasvi/screens/occupation/rickshaw-puller.dart';
 import 'package:nasvi/screens/occupation/small-enterprise.dart';
 import 'package:nasvi/screens/occupation/street-vendor.dart';
 import 'package:nasvi/screens/occupation/waste-worker.dart';
+import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
 
 import '../../keys.dart';
 
 class Occupation extends StatefulWidget {
   final GlobalKey<FormBuilderState> formKey;
+  OccupationCard o;
 
-  const Occupation({Key key, this.formKey}) : super(key: key);
+  Occupation({Key key, this.formKey}) : super(key: key);
+
+  bool isValid() {
+    if (o != null) {
+      return o.isFormValid();
+    }
+    return true;
+  }
 
   @override
   _OccupationState createState() => _OccupationState();
@@ -39,6 +48,12 @@ class _OccupationState extends State<Occupation> {
     }
   }
 
+  void _onChanged(Map<String, dynamic> fieldData) {
+    print('Field data $fieldData');
+    widget.formKey.currentState
+        .setAttributeValue("occupation-props", fieldData);
+  }
+
   _buildOccupationCard() {
     if (_occup != null) {
       if (_occup.compareTo(Keys.WASTE_WORKER) == 0) {
@@ -46,13 +61,13 @@ class _OccupationState extends State<Occupation> {
       } else if (_occup.compareTo(Keys.FARMER) == 0) {
         return Farmer();
       } else if (_occup.compareTo(Keys.STREET_VENDOR_OR_REHDI_PATRI) == 0) {
-        return StreetVendor();
+        return StreetVendor(formKey: widget.formKey,);
       } else if (_occup.compareTo(Keys.SMALL_ENTERPRISE) == 0) {
-        return SmallEnterrise();
+        return SmallEnterrise(formKey: widget.formKey,);
       } else if (_occup.compareTo(Keys.AGRICULTURAL_LABR) == 0) {
         return AgriculturalLabour();
       } else if (_occup.compareTo(Keys.CONSTRUCTION_WORKER) == 0) {
-        return ConstructionWorker();
+        return ConstructionWorker(formKey: widget.formKey,);
       } else if (_occup.compareTo(Keys.DOMESTIC_WORKER) == 0) {
         return DomesticWorker();
       } else if (_occup.compareTo(Keys.HOME_BASED_WORKER) == 0) {
@@ -79,18 +94,33 @@ class _OccupationState extends State<Occupation> {
         children: <Widget>[
           MyFormBuilderDropdown(
               onChanged: (val) async {
+                _onChanged(null);
                 setState(() {
                   _occup = val;
                 });
               },
               attribute: Keys.OCCUPATION,
               labelText: Keys.OCCUPATION,
-                // initialValue: 'Male',
-                hint: 'Select Occupation',
-                items: Keys.OCCUPATION_TYPES),
-            Expanded(child: _buildOccupationCard())
-          ],
-        ),
-      );
-    }
+              // initialValue: 'Male',
+              hint: 'Select Occupation',
+              items: Keys.OCCUPATION_TYPES),
+          Expanded(
+            child: widget.o = OccupationCard(
+              onChanged: _onChanged,
+              initialData: widget.formKey.currentState.value["occupation-props"],
+              child: _buildOccupationCard(),
+            ),
+          ),
+//          FormBuilderCustomField(
+//            attribute: "occupation-props",
+//            formField: FormField(
+//              builder: (FormFieldState<dynamic> field) {
+//                return Expanded(child: _buildOccupationCard());
+//              },
+//            ),
+//          ),
+        ],
+      ),
+    );
   }
+}

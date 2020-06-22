@@ -27,7 +27,7 @@ class Review extends StatelessWidget {
             itemBuilder: (context, idx) {
               return TagPair(
                 tag: data[idx]?.key,
-                desc: data[idx]?.value,
+                desc: data[idx]?.value.toString(),
               );
             },
             itemCount: data.length,

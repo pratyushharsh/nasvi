@@ -16,6 +16,7 @@ class UserForm extends StatefulWidget {
 class _UserFormState extends State<UserForm> {
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
   int count = 0;
+  Occupation occWidget;
 
   Widget _body() {
     if (count == 0) {
@@ -32,7 +33,7 @@ class _UserFormState extends State<UserForm> {
       return Skill(formKey: _fbKey,);
     }
     else if (count == 4) {
-      return Occupation(
+      return occWidget = Occupation(
         formKey: _fbKey,
       );
 
@@ -110,9 +111,17 @@ class _UserFormState extends State<UserForm> {
               onPressed: () {
                 _fbKey.currentState.save();
                 if (_fbKey.currentState.validate()) {
-                  setState(() {
-                    if (count > 0) count--;
-                  });
+                  if (count == 4 && occWidget != null) {
+                    if (occWidget.isValid()) {
+                      setState(() {
+                        if (count > 0) count--;
+                      });
+                    }
+                  } else {
+                    setState(() {
+                      if (count > 0) count--;
+                    });
+                  }
                 }
                 print(_fbKey.currentState.value);
               },
@@ -125,9 +134,17 @@ class _UserFormState extends State<UserForm> {
                 _fbKey.currentState.save();
                 print(_fbKey.currentState.value);
                 if (_fbKey.currentState.validate()) {
-                  setState(() {
-                    if (count < 10) count++;
-                  });
+                  if (count == 4 && occWidget != null) {
+                    if (occWidget.isValid()) {
+                      setState(() {
+                        if (count < 10) count++;
+                      });
+                    }
+                  } else {
+                    setState(() {
+                      if (count < 10) count++;
+                    });
+                  }
                 }
               },
               label: Text("Next"),
