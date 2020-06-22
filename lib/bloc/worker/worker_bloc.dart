@@ -1,9 +1,14 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:intl/intl.dart';
+import 'package:nasvi/repository/worker-repo.dart';
 import './bloc.dart';
 
 class WorkerBloc extends Bloc<WorkerEvent, WorkerState> {
+
+  final WorkersRepository workerRepo;
+
+  WorkerBloc(this.workerRepo);
+
   @override
   WorkerState get initialState => InitialWorkerState();
 
@@ -19,8 +24,7 @@ class WorkerBloc extends Bloc<WorkerEvent, WorkerState> {
   Stream<WorkerState> _mapToAddNewWorker(Map<String, dynamic> data) async* {
     yield AddingNewWorker();
     try {
-      await Future.delayed(Duration(seconds: 2));
-//      throw Exception();
+      await workerRepo.addNewWorker(data);
       yield SuccessAddingWorker();
     } catch(e) {
       print(e);

@@ -78,19 +78,19 @@ class _OccupationState extends State<Occupation> {
       child: Column(
         children: <Widget>[
           MyFormBuilderDropdown(
-              onChanged: (val) {
+              onChanged: (val) async {
                 setState(() {
                   _occup = val;
                 });
               },
               attribute: Keys.OCCUPATION,
               labelText: Keys.OCCUPATION,
-              // initialValue: 'Male',
-              hint: 'Select Occupation',
-              items: Keys.OCCUPATION_TYPES),
-          Expanded(child: _buildOccupationCard())
-        ],
-      ),
-    );
+                // initialValue: 'Male',
+                hint: 'Select Occupation',
+                items: Keys.OCCUPATION_TYPES),
+            Expanded(child: _buildOccupationCard())
+          ],
+        ),
+      );
+    }
   }
-}

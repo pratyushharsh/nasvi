@@ -34,7 +34,7 @@ void main() {
                   platform: defaultTargetPlatform,)),
           ),
           BlocProvider<WorkerBloc>(
-            create: (BuildContext context) => WorkerBloc(),
+            create: (BuildContext context) => WorkerBloc(RepositoryProvider.of(context)),
           )
         ],
         child: MyApp(),

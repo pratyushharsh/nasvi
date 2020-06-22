@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 class Keys {
   static const String YES = "yes";
   static const String NO = "no";
@@ -162,4 +164,6 @@ class Keys {
 
   static const String OTHERS = "others";
   static const String DETAIL_OF_YOUR_OCCUPATION = "detail_of_your_occupation";
+
+  static HashMap<String, List<String>> OCCUPATION_MAP = HashMap();
 }
