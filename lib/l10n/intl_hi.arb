@@ -106,5 +106,19 @@
 	"ww_employment_id_card": "क्या आपके पास एक रोजगार आईडी कार्ड है",
 	"ww_nagar_nigam_linked": "क्या आप नगर निगम से जुड़े हैं?",
 	"no": "नहीं",
-	"yes": "हाँ"
+	"yes": "हाँ",
+	"Enter_valid_aadhar_card_no": "मान्य आधार कार्ड सं",
+	"enter_ration_card_no": "राशन कार्ड नंबर दर्ज करें",
+	"enter_valid_mobile_no": "मान्य मोबाइल नंबर दर्ज करें",
+	"enter_valid_ration_card_no": "मान्य राशन कार्ड नंबर दर्ज करें",
+	"female": "महिला",
+	"if_yes_then_specify_skill_training_required": "यदि हाँ, तो आवश्यक कौशल प्रशिक्षण निर्दिष्ट करें",
+	"if_yes_then_specify_your_Skill": "यदि हाँ तो अपना कौशल निर्दिष्ट करें",
+	"male": "पुरुष",
+	"na": "NA",
+	"other": "अन्य",
+	"skill": "कौशल",
+	"small_farmer": "छोटा फ्रेमर",
+	"social_security_information": "सामाजिक सुरक्षा जानकारी",
+	"specify_your_Skill": "अपने कौशल को निर्दिष्ट करें"
 }
