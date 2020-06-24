@@ -8,7 +8,8 @@ class WorkersRepository {
   WorkersRepository({Firestore db})
       : _db = db ?? Firestore.instance;
 
-  Future<void> addNewWorker(Map<String, dynamic> p) async {
-    return _db.collection('/workers').add(p);
+  Future<String> addNewWorker(Map<String, dynamic> p) async {
+    DocumentReference ref = await _db.collection('/workers').add(p);
+    return ref.documentID;
   }
 }

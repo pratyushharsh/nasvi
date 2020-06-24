@@ -24,8 +24,8 @@ class WorkerBloc extends Bloc<WorkerEvent, WorkerState> {
   Stream<WorkerState> _mapToAddNewWorker(Map<String, dynamic> data) async* {
     yield AddingNewWorker();
     try {
-      await workerRepo.addNewWorker(data);
-      yield SuccessAddingWorker();
+      String docId = await workerRepo.addNewWorker(data);
+      yield SuccessAddingWorker(docId);
     } catch(e) {
       print(e);
       yield ErrorWhileAddingWorker();

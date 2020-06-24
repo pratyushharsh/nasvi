@@ -186,7 +186,7 @@ class _UserFormState extends State<UserForm> {
                   ),
                 ),
               );
-            Navigator.of(context).pushReplacementNamed(Router.THANKYOU_ROUTE);
+            Navigator.of(context).pushReplacementNamed(Router.THANKYOU_ROUTE, arguments: state.referenceNo );
           }
 
           if (state is ErrorWhileAddingWorker) {

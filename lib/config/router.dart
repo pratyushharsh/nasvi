@@ -12,8 +12,8 @@ class Router {
       case USER_FORM_ROUTE:
         return MaterialPageRoute(builder: (_) => UserForm());
       case THANKYOU_ROUTE:
-        return MaterialPageRoute(builder: (_) => ThanksScreen());
-
+        String ref = settings.arguments as String;
+        return MaterialPageRoute(builder: (_) => ThanksScreen(ref: ref,));
       default:
         return MaterialPageRoute(builder: (_) => Scaffold(
           body: Center(child: Text('No route defined for ${settings.name}'),),
