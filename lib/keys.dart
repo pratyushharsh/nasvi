@@ -29,7 +29,8 @@ class Keys {
 
 //Personal screen
   static const String PERSONAL_DETAIL = "personal_detail";
-  static const String SOCIAL_AND_EMPLOYMENT_ELIGIBILITY = "social_and_employment_eligibility";
+  static const String SOCIAL_AND_EMPLOYMENT_ELIGIBILITY =
+      "social_and_employment_eligibility";
   static const String STATE = "state";
   static const String DISTRICT = "district";
   static const String BLOCK = "block";
@@ -40,7 +41,8 @@ class Keys {
   static const String ENTER_VALID_MOBILE_NO = "enter_valid_mobile_no";
 
 //FOR SOCIAL SECURITY INFORMATION SCREEN
-  static const String SOCIAL_SECURITY_INFORMATION = "social_security_information";
+  static const String SOCIAL_SECURITY_INFORMATION =
+      "social_security_information";
   static const String HAVE_AADHAR_CARD = "have_aadhar_card";
   static const String AADHAR_CARD_NO = "aadhar_card_no";
   static const String HAVING_SAVING_BANK_ACCOUNT = "having_saving_bank_account";
@@ -78,8 +80,8 @@ class Keys {
       "specify_your_skill_train_req";
   static const String IF_YES_SPECIFY_SKILL = "if_yes_then_specify_your_Skill";
   static const String SPECIFY_SKILL = "specify_your_Skill";
-  static const String IF_YES_SPECIFY_TRAINING_SKILL_REQ = "if_yes_then_specify_skill_training_required ";
-
+  static const String IF_YES_SPECIFY_TRAINING_SKILL_REQ =
+      "if_yes_then_specify_skill_training_required ";
 
 //FOR OCCUPATION SCREEN
   static const String OCCUPATION = "occupation";
@@ -177,5 +179,79 @@ class Keys {
   static const String OTHERS = "others";
   static const String DETAIL_OF_YOUR_OCCUPATION = "detail_of_your_occupation";
 
-  static HashMap<String, List<String>> OCCUPATION_MAP = HashMap();
+  // States List
+  static const String ANDAMAN_AND_NICOBAR = "andaman_and_nicobar";
+  static const String ANDHRA_PRADESH = "andhra_pradesh";
+  static const String ARUNACHAL_PRADESH = "arunachal_pradesh";
+  static const String ASSAM = "assam";
+  static const String BIHAR = "bihar";
+  static const String CHANDIGARH = "chandigarh";
+  static const String CHHATTISGARH = "chhattisgarh";
+  static const String DAMAN_AND_DIU = "daman_and_diu";
+  static const String DELHI_NCR = "delhi_ncr";
+  static const String GOA = "goa";
+  static const String GUJARAT = "gujarat";
+  static const String HARYANA = "haryana";
+  static const String HIMACHAL_PRADESH = "himachal_pradesh";
+  static const String JAMMU_AND_KASHMIR = "jammu_and_kashmir";
+  static const String JHARKHAND = "jharkhand";
+  static const String KARNATAKA = "karnataka";
+  static const String KERALA = "kerala";
+  static const String LADAKH = "ladakh";
+  static const String LAKSHADWEEP = "lakshadweep";
+  static const String MADHYA_PRADESH = "madhya_pradesh";
+  static const String MAHARASHTRA = "maharashtra";
+  static const String MANIPUR = "manipur";
+  static const String MEGHALAYA = "meghalaya";
+  static const String MIZORAM = "mizoram";
+  static const String NAGALAND = "nagaland";
+  static const String ODISHA = "odisha";
+  static const String PUDUCHERRY = "puducherry";
+  static const String PUNJAB = "punjab";
+  static const String RAJASTHAN = "rajasthan";
+  static const String SIKKIM = "sikkim";
+  static const String TAMIL_NADU = "tamil_nadu";
+  static const String TELANGANA = "telangana";
+  static const String TRIPURA = "tripura";
+  static const String UTTAR_PRADESH = "uttar_pradesh";
+  static const String UTTARAKHAND = "uttarakhand";
+  static const String WEST_BENGAL = "west_bengal";
+  static const List<String> STATES = [
+    ANDAMAN_AND_NICOBAR,
+    ANDHRA_PRADESH,
+    ARUNACHAL_PRADESH,
+    ASSAM,
+    BIHAR,
+    CHANDIGARH,
+    CHHATTISGARH,
+    DAMAN_AND_DIU,
+    DELHI_NCR,
+    GOA,
+    GUJARAT,
+    HARYANA,
+    HIMACHAL_PRADESH,
+    JAMMU_AND_KASHMIR,
+    JHARKHAND,
+    KARNATAKA,
+    KERALA,
+    LADAKH,
+    LAKSHADWEEP,
+    MADHYA_PRADESH,
+    MAHARASHTRA,
+    MANIPUR,
+    MEGHALAYA,
+    MIZORAM,
+    NAGALAND,
+    ODISHA,
+    PUDUCHERRY,
+    PUNJAB,
+    RAJASTHAN,
+    SIKKIM,
+    TAMIL_NADU,
+    TELANGANA,
+    TRIPURA,
+    UTTAR_PRADESH,
+    UTTARAKHAND,
+    WEST_BENGAL
+  ];
 }
