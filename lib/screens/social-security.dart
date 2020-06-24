@@ -30,11 +30,11 @@ class SocialSecurity extends StatelessWidget {
                 if (Validator.isValidAadhaarCard(val)) {
                   return null;
                 } else {
-                  return "Enter Valid Aadhaar No";
+                  return Keys.AADHAR_CARD_NO;
                 }
               }
             ],
-            yesLabelText: "Enter Aadhaar Card Number",
+            yesLabelText: Keys.ENTER_VALID_AADHAR_CARD_NO,
           ),
 
 //          MyFormBuilderRadio(

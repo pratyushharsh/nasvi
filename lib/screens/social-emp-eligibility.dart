@@ -66,7 +66,7 @@ class PersonalDetailCard extends StatelessWidget {
                 if (Validator.isValidMobileNo(val)) {
                   return null;
                 } else {
-                  return "Enter valid Mobile No";
+                  return Keys.ENTER_VALID_MOBILE_NO;
                 }
               }
             ],

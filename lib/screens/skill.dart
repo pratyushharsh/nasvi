@@ -41,11 +41,11 @@ class Skill extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return "specify your Skill";
+                  return Keys.SPECIFY_YOUR_SKILL;
                 }
               }
             ],
-            yesLabelText: "if Yes then specify your Skill ",
+            yesLabelText: Keys.IF_YES_SPECIFY_SKILL,
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.CERTI_RELATED_SKILL,
@@ -65,11 +65,11 @@ class Skill extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return "specify your Skill";
+                  return Keys.SPECIFY_YOUR_SKILL;
                 }
               }
             ],
-            yesLabelText: "if Yes then specify Skill training required ",
+            yesLabelText: Keys.IF_YES_SPECIFY_TRAINING_SKILL_REQ,
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.PARTICULAR_SKILL_REQ,

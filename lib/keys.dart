@@ -4,10 +4,14 @@ class Keys {
   static const String YES = "yes";
   static const String NO = "no";
   static const String NA = "na";
+  static const String MALE = "male";
+  static const String FEMALE = "female";
+  static const String OTHER = "other";
   static const String OTHERSS = "other";
   static const List<String> YES_NO = [YES, NO];
   static const List<String> YES_NO_OTHERS = [YES, NO, OTHERSS];
   static const List<String> YES_NO_NA = [YES, NO, NA];
+  static const List<String> MALE_FEM_OTHER = [MALE, FEMALE, OTHER];
 
   static const String NAME = "name";
   static const String NICK_NAME = "nick_name";
@@ -20,6 +24,8 @@ class Keys {
   static const String CVOID_19_CAMPION = "covid_19_campion";
   static const String CVOID_19_RATION_RECEIVE = "covid_19_ration_receive";
   static const String AYUSHMAN_OR_SWASTHYA_CARD = "ayushman_or_swasthya_card";
+  static const String ENTER_VALID_RATION_CARD_N0 = "enter_valid_ration_card_no";
+  static const String ENTER_RATION_CARD_N0 = "enter_ration_card_no";
 
 //Personal screen
   static const String PERSONAL_DETAIL = "personal_detail";
@@ -31,6 +37,7 @@ class Keys {
   static const String WARD_NO = "ward_no";
   static const String POSTAL_CODE = "pincode";
   static const String MOBILE = "mobile";
+  static const String ENTER_VALID_MOBILE_NO = "enter_valid_mobile_no";
 
 //FOR SOCIAL SECURITY INFORMATION SCREEN
   static const String SOCIAL_SECURITY_INFORMATION = "social_security_information";
@@ -59,6 +66,7 @@ class Keys {
   static const String GETTING_DIVYANG_PENSION = "getting_divyang_pension";
   static const String GETTING_OLD_AGE_PENSION = "getting_old_age_pension";
   static const String GETTING_ANY_WINDOW_PENSION = "getting_any_window_pension";
+  static const String ENTER_VALID_AADHAR_CARD_NO = "Enter_valid_aadhar_card_no";
 
 //FOR SKILL SCREEN
   static const String SKILL = "skill";
@@ -68,6 +76,10 @@ class Keys {
   static const String PARTICULAR_SKILL_REQ = "particular_skill_required";
   static const String SPECIFY_YOUR_SKILL_TRAIN_REQ =
       "specify_your_skill_train_req";
+  static const String IF_YES_SPECIFY_SKILL = "if_yes_then_specify_your_Skill";
+  static const String SPECIFY_SKILL = "specify_your_Skill";
+  static const String IF_YES_SPECIFY_TRAINING_SKILL_REQ = "if_yes_then_specify_skill_training_required ";
+
 
 //FOR OCCUPATION SCREEN
   static const String OCCUPATION = "occupation";

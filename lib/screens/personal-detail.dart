@@ -35,14 +35,14 @@ class PersonalDetail extends StatelessWidget {
                 if (Validator.isValidAge(val)) {
                   return null;
                 } else {
-                  return "Enter Age";
+                  return "Enter Age  code";
                 }
               }
             ],),
           MyFormBuilderRadio(
               attribute: Keys.GENDER,
               labelText: Keys.GENDER,
-              options: ['Male', 'Female', 'Other'],
+              options: Keys.MALE_FEM_OTHER,
               validators: [FormBuilderValidators.required()]),
           MyFormBuilderRadio(
               attribute: Keys.APL_CATEGORY,
@@ -64,11 +64,11 @@ class PersonalDetail extends StatelessWidget {
                 if (Validator.isValidRationCard(val)) {
                   return null;
                 } else {
-                  return "Enter Valid Ration Card No";
+                  return Keys.ENTER_VALID_RATION_CARD_N0;
                 }
               }
             ],
-            yesLabelText: "Enter Ration Card Number",
+            yesLabelText: Keys.ENTER_RATION_CARD_N0,
           ),
           //        MyFormBuilderRadio(
 //              attribute: Keys.RATION_CARD,
