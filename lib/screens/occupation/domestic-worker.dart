@@ -15,14 +15,12 @@ class DomesticWorker extends StatelessWidget {
               attribute: Keys.WORK_RELATED_ID_CARD,
               labelText: Keys.WORK_RELATED_ID_CARD,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.WORK_ID_CARD_AUTHRIZATION,
               labelText: Keys.WORK_ID_CARD_AUTHRIZATION,
-              options: [
-                "RAW", "Police","Any Organization","Other"
-              ]
+              options: Keys.WORKING_ID_CATEGORY,
           ),
         ],
       ),

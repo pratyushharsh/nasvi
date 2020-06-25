@@ -26,6 +26,7 @@ class Keys {
   static const String AYUSHMAN_OR_SWASTHYA_CARD = "ayushman_or_swasthya_card";
   static const String ENTER_VALID_RATION_CARD_N0 = "enter_valid_ration_card_no";
   static const String ENTER_RATION_CARD_N0 = "enter_ration_card_no";
+  static const String VALID_AGE = "valid_age";
 
 //Personal screen
   static const String PERSONAL_DETAIL = "personal_detail";
@@ -39,6 +40,7 @@ class Keys {
   static const String POSTAL_CODE = "pincode";
   static const String MOBILE = "mobile";
   static const String ENTER_VALID_MOBILE_NO = "enter_valid_mobile_no";
+  static const String ENTER_VALID_POSTAL_CODE = "enter_valid_postal_code";
 
 //FOR SOCIAL SECURITY INFORMATION SCREEN
   static const String SOCIAL_SECURITY_INFORMATION =
@@ -69,6 +71,13 @@ class Keys {
   static const String GETTING_OLD_AGE_PENSION = "getting_old_age_pension";
   static const String GETTING_ANY_WINDOW_PENSION = "getting_any_window_pension";
   static const String ENTER_VALID_AADHAR_CARD_NO = "Enter_valid_aadhar_card_no";
+  static const String SPECIFY_LINK_SOCIAL_SECURITY_SCHEME = "specify_link_social_scheme";
+  static const String ENTER_VOTER_CARD = "enter_voter_card";
+  static const String ENTER_VALID_VOTER_CARD = "enter_valid_voter_card";
+  static const String ENTER_PAN_CARD = "enter_pan_card";
+  static const String ENTER_VALID_PAN_CARD = "enter_valid_pan_card";
+  static const String ENTER_DIVYANG_CERTI_NMBR = "enter_divyang_certi_nmbr";
+  static const String ENTER_VALID_DIVYANG_CERTI_NMBR = "enter_valid_divyang_certi_nmbr";
 
 //FOR SKILL SCREEN
   static const String SKILL = "skill";
@@ -85,6 +94,7 @@ class Keys {
 
 //FOR OCCUPATION SCREEN
   static const String OCCUPATION = "occupation";
+  static const String HINT_OCCUPATION = "select_occupation";
   static const List<String> OCCUPATION_TYPES = [
     WASTE_WORKER,
     FARMER,
@@ -135,6 +145,10 @@ class Keys {
   static const String INCOME_TAX_RETURN = "income_tax_return";
   static const String REG_UNDER_SHOP_ESTAB_ACT = "reg_under_shop_estab_act";
   static const String RECIV_MUDRA_LOAN = "reciv_mudra_loan";
+  static const String SERVICE = "Service";
+  static const String SALE_PURCHASE = "sale_purchase";
+  static const String PRODUC_MANFC = "production_manufacturing";
+  static const List<String> TYPES_SMALL_ENTERPRISE = [SERVICE,SALE_PURCHASE,PRODUC_MANFC,OTHERS];
 
   static const String AGRICULTURAL_LABR = "agriculture_labour";
   static const String MGNREGA_JOB_CARD = "mgnrega_job_card";
@@ -148,10 +162,16 @@ class Keys {
   static const String RECV_AUZAAR_OR_OTHER_SCHEME =
       "recv_auzaar_or_other_scheme";
   static const String MENTION_OTHER_SCHEME = "mension_other_scheme";
+  static const String MENTION_OTHER_SCHEME_REQ = "mension_other_scheme_req";
 
   static const String DOMESTIC_WORKER = "domestic_worker";
+  static const String RAW = "raw";
+  static const String POLICE = "police";
+  static const String ANY_ORG = "any_organization";
+  static const String OTHERS_DOMESTIC = "other_domestic";
   static const String WORK_RELATED_ID_CARD = "work_related_id_card";
   static const String WORK_ID_CARD_AUTHRIZATION = "work_id_card_authorization";
+  static const List<String> WORKING_ID_CATEGORY = [RAW, POLICE, ANY_ORG,OTHERS_DOMESTIC];
 
   static const String HOME_BASED_WORKER = "home_based_worker";
   static const String PIECE_RATE_OR_OWN_ACCT_WORKR =
@@ -254,4 +274,13 @@ class Keys {
     UTTARAKHAND,
     WEST_BENGAL
   ];
+  static const String SKILLED = "skilled";
+  static const String SEMI_SKILLED = "semi_skilled";
+  static const String HIGHLY_SKILLED = "highly_skilled";
+  static const String UNSKILLED = "unskilled";
+  static const List<String> CATEGORY_SKILLS = [SKILLED, SEMI_SKILLED, HIGHLY_SKILLED,UNSKILLED];
+  static const String HINT_STATE = "select_state";
+  static const String FIELD_CANNOT_EMPTY = "this_field_cannot_empty";
+
+
 }

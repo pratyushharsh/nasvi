@@ -16,19 +16,19 @@ class HomeBasedWorker extends StatelessWidget {
           MyFormBuilderTextField(
               attribute: Keys.PIECE_RATE_OR_OWN_ACCT_WORKR,
               labelText: Keys.PIECE_RATE_OR_OWN_ACCT_WORKR,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.Artisian_Card,
               labelText: Keys.Artisian_Card,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.REG_WITH_ESIC,
               labelText: Keys.REG_WITH_ESIC,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
         ],
       ),

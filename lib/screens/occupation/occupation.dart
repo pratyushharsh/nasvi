@@ -102,7 +102,7 @@ class _OccupationState extends State<Occupation> {
               attribute: Keys.OCCUPATION,
               labelText: Keys.OCCUPATION,
               // initialValue: 'Male',
-              hint: 'Select Occupation',
+              hint: Keys.HINT_OCCUPATION,
               items: Keys.OCCUPATION_TYPES),
           Expanded(
             child: widget.o = OccupationCard(

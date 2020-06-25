@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/config/validator.dart';
 import 'package:nasvi/keys.dart';
 import 'package:nasvi/widget/custom-card.dart';
@@ -15,15 +16,15 @@ class PersonalDetailCard extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Social And Employment Eligibility",
+          Text(Intl.message(Keys.SOCIAL_AND_EMPLOYMENT_ELIGIBILITY),
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
 //          CustomYesNoSpecify(labelText: "Hello", attribute: "custom-yes-no", formKey: formKey,),
           MyFormBuilderDropdown(
               attribute: Keys.STATE,
               labelText: Keys.STATE,
               // initialValue: 'Male',
-              hint: 'Select State',
-              items: ['Delhi', 'Bihar', 'Jharkhand']),
+              hint: Keys.HINT_STATE,
+              items: Keys.STATES),
           MyFormBuilderTextField(
             attribute: Keys.DISTRICT,
             labelText: Keys.DISTRICT,
@@ -31,17 +32,17 @@ class PersonalDetailCard extends StatelessWidget {
           MyFormBuilderTextField(
             attribute: Keys.BLOCK,
             labelText: Keys.BLOCK,
-            validators:[ FormBuilderValidators.required()]
+            validators:[ FormBuilderValidatorss.required()]
           ),
           MyFormBuilderTextField(
             attribute: Keys.VILLAGE,
             labelText: Keys.VILLAGE,
-              validators:[ FormBuilderValidators.required()]
+              validators:[ FormBuilderValidatorss.required()]
           ),
           MyFormBuilderTextField(
             attribute: Keys.WARD_NO,
             labelText: Keys.WARD_NO,
-              validators:[ FormBuilderValidators.required()]
+              validators:[ FormBuilderValidatorss.required()]
           ),
           MyFormBuilderTextField(
             attribute: Keys.POSTAL_CODE,
@@ -52,7 +53,7 @@ class PersonalDetailCard extends StatelessWidget {
                 if (Validator.isValidPostalCode(val)) {
                   return null;
                 } else {
-                  return "Enter valid Postal code";
+                  return Intl.message(Keys.ENTER_VALID_POSTAL_CODE??"");
                 }
               }
             ],
@@ -66,7 +67,7 @@ class PersonalDetailCard extends StatelessWidget {
                 if (Validator.isValidMobileNo(val)) {
                   return null;
                 } else {
-                  return Keys.ENTER_VALID_MOBILE_NO;
+                  return Intl.message(Keys.ENTER_VALID_MOBILE_NO??"");
                 }
               }
             ],

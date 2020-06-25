@@ -38,7 +38,7 @@ class MyFormBuilderRadio extends StatelessWidget {
                 options: options
                     .map((lang) => FormBuilderFieldOption(
                           value: lang,
-                          child: Text('$lang'),
+                          child: Text(Intl.message('$lang')),
                         ))
                     .toList(growable: false),
               ),
@@ -49,6 +49,7 @@ class MyFormBuilderRadio extends StatelessWidget {
     );
   }
 }
+
 
 class MyFormBuilderTextField extends StatelessWidget {
   final String attribute;
@@ -103,8 +104,8 @@ class MyFormBuilderDropdown extends StatelessWidget {
         decoration: InputDecoration(
             labelText: Intl.message(labelText), border: OutlineInputBorder()),
         // initialValue: 'Male',
-        hint: hint != null ? Text(hint) : null,
-        validators: [FormBuilderValidators.required(), ...validators],
+        hint: hint != null ? Text(Intl.message(hint)) : null,
+        validators: [FormBuilderValidatorss.required(), ...validators],
         items: items
             .map((s) => DropdownMenuItem(value: s, child: Text(s != null ? Intl.message(s) : "")))
             .toList(),
@@ -112,6 +113,9 @@ class MyFormBuilderDropdown extends StatelessWidget {
     );
   }
 }
+
+
+
 
 class CustomYesNoSpecify extends StatefulWidget {
   final GlobalKey<FormBuilderState> formKey;
@@ -174,7 +178,7 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
                 keyboardType: widget.keyboardType,
                       attribute: "${widget.labelText}-specify",
                       decoration: InputDecoration(
-                          labelText: widget.yesLabelText,
+                          labelText: Intl.message(widget.yesLabelText),
                           border: InputBorder.none),
                       validators: [
                         (val) {
@@ -194,5 +198,24 @@ class _CustomYesNoSpecifyState extends State<CustomYesNoSpecify> {
         ),
       ),
     );
+
+  }
+}
+@override
+class FormBuilderValidatorss {
+  /// [FormFieldValidator] that requires the field have a non-empty value.
+  static FormFieldValidator required({
+    String errorText = Keys.FIELD_CANNOT_EMPTY,
+  }) {
+    return (valueCandidate) {
+      if (valueCandidate == null ||
+          ((valueCandidate is Iterable ||
+              valueCandidate is String ||
+              valueCandidate is Map) &&
+              valueCandidate.length == 0)) {
+        return Intl.message(errorText);
+      }
+      return null;
+    };
   }
 }

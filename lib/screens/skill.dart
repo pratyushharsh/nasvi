@@ -25,12 +25,7 @@ class Skill extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.CATEGORY_SKILL,
               labelText: Keys.CATEGORY_SKILL,
-              options: [
-                'Skilled',
-                'Semi-Skilled',
-                'Highly-Skilled',
-                'Unskilled'
-              ]),
+              options: Keys.CATEGORY_SKILLS),
           CustomYesNoSpecify(
             labelText: Keys.CERTI_RELATED_SKILL,
             attribute: Keys.CERTI_RELATED_SKILL,
@@ -41,11 +36,11 @@ class Skill extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return Keys.SPECIFY_YOUR_SKILL;
+                  return Intl.message(Keys.SPECIFY_YOUR_SKILL??"");
                 }
               }
             ],
-            yesLabelText: Keys.IF_YES_SPECIFY_SKILL,
+            yesLabelText: Intl.message(Keys.IF_YES_SPECIFY_SKILL??""),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.CERTI_RELATED_SKILL,
@@ -65,11 +60,11 @@ class Skill extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return Keys.SPECIFY_YOUR_SKILL;
+                  return Intl.message(Keys.SPECIFY_YOUR_SKILL??"");
                 }
               }
             ],
-            yesLabelText: Keys.IF_YES_SPECIFY_TRAINING_SKILL_REQ,
+            yesLabelText: Intl.message(Keys.IF_YES_SPECIFY_TRAINING_SKILL_REQ??""),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.PARTICULAR_SKILL_REQ,

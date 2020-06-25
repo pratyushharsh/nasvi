@@ -18,7 +18,7 @@ class Validator {
     r'^[0-9]{12}$'
   );
   static final RegExp _voterCardValidator = RegExp(
-      r'^([0-9]{9})(X|V)$'
+      r'^([a-zA-Z]){3}([0-9]){7}?$'
   );
   static final RegExp _postalcodeValidator = RegExp(
       r'^([0-9]{6})$'

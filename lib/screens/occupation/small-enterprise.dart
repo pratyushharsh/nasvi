@@ -18,45 +18,43 @@ class SmallEnterrise extends StatelessWidget {
           MyFormBuilderRadio(
               attribute: Keys.TYPE_OF_ENTERPRISE,
               labelText: Keys.TYPE_OF_ENTERPRISE,
-              options: [
-                "Service", "Sale/Purchase","Production/Manufacturing","Others"
-              ]
+              options: Keys.TYPES_SMALL_ENTERPRISE,
           ),
           MyFormBuilderRadio(
               attribute: Keys.ENTERPRISE_NAME,
               labelText: Keys.ENTERPRISE_NAME,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()],
+              validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.UDYOG_AADHAR_CARD,
               labelText: Keys.UDYOG_AADHAR_CARD,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.BUSINESS_ON_SOCIAL_MEDIA,
               labelText: Keys.BUSINESS_ON_SOCIAL_MEDIA,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.OWN_OR_RENT_SHOP,
               labelText: Keys.OWN_OR_RENT_SHOP,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.RENT_AGREEMENT,
               labelText: Keys.RENT_AGREEMENT,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.TRAINING_ON_SOCL_MEDIA,
               labelText: Keys.TRAINING_ON_SOCL_MEDIA,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           CustomYesNoSpecify(
             labelText: Keys.ANY_SKILL_OR_TRAINING,
@@ -68,11 +66,11 @@ class SmallEnterrise extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return "specify your Skill required";
+                  return Intl.message(Keys.SPECIFY_YOUR_SKILL);
                 }
               }
             ],
-            yesLabelText: "if Yes then specify  ",
+            yesLabelText: Intl.message(Keys.IF_YES_SPECIFY_SKILL),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.ANY_SKILL_OR_TRAINING,
@@ -87,31 +85,31 @@ class SmallEnterrise extends StatelessWidget {
               attribute: Keys.PROJECT_REPORT_BUSINESS,
               labelText: Keys.PROJECT_REPORT_BUSINESS,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.BAL_SHEET_OF_ENTERPRISE,
               labelText: Keys.BAL_SHEET_OF_ENTERPRISE,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()],
+              validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.REG_UNDER_SHOP_ESTAB_ACT,
               labelText: Keys.REG_UNDER_SHOP_ESTAB_ACT,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.BAL_SHEET_OF_ENTERPRISE,
               labelText: Keys.BAL_SHEET_OF_ENTERPRISE,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.RECIV_MUDRA_LOAN,
               labelText: Keys.RECIV_MUDRA_LOAN,
               options:Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
         ],
       ),

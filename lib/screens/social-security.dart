@@ -30,11 +30,11 @@ class SocialSecurity extends StatelessWidget {
                 if (Validator.isValidAadhaarCard(val)) {
                   return null;
                 } else {
-                  return Keys.AADHAR_CARD_NO;
+                  return Intl.message(Keys.AADHAR_CARD_NO??"");
                 }
               }
             ],
-            yesLabelText: Keys.ENTER_VALID_AADHAR_CARD_NO,
+            yesLabelText: Intl.message(Keys.ENTER_VALID_AADHAR_CARD_NO),
           ),
 
 //          MyFormBuilderRadio(
@@ -49,32 +49,32 @@ class SocialSecurity extends StatelessWidget {
               attribute: Keys.HAVING_SAVING_BANK_ACCOUNT,
               labelText: Keys.HAVING_SAVING_BANK_ACCOUNT,
               options: Keys.YES_NO,
-          validators: [FormBuilderValidators.required()],),
+          validators: [FormBuilderValidatorss.required()],),
           MyFormBuilderRadio(
               attribute: Keys.JAN_DHAN_ACCOUNT,
               labelText: Keys.JAN_DHAN_ACCOUNT,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.BANK_ACCT_LINK_WITH_AADHAR_CARD,
               labelText: Keys.BANK_ACCT_LINK_WITH_AADHAR_CARD,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.KYC_VERIFY_FROM_BANK,
               labelText: Keys.KYC_VERIFY_FROM_BANK,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.LINKED_WITH_PMSBY,
               labelText: Keys.LINKED_WITH_PMSBY,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.LINKED_WITH_PMJJBY,
               labelText: Keys.LINKED_WITH_PMJJBY,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           CustomYesNoSpecify(
             labelText: Keys.LINKED_WITH_SOCIAL_SECURITY_SCHEME,
             attribute: Keys.LINKED_WITH_SOCIAL_SECURITY_SCHEME,
@@ -85,11 +85,11 @@ class SocialSecurity extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return "Specify, If Yes";
+                  return Intl.message(Keys.SPECIFY_LINK_SOCIAL_SECURITY_SCHEME);
                 }
               }
             ],
-            yesLabelText: "Specify",
+            yesLabelText: Intl.message(Keys.SPECIFY_LINK_SOCIAL_SECURITY_SCHEME),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.LINKED_WITH_SOCIAL_SECURITY_SCHEME,
@@ -103,7 +103,7 @@ class SocialSecurity extends StatelessWidget {
               attribute: Keys.RECV_CASH_TRANSFER_DURING_COVID_19,
               labelText: Keys.RECV_CASH_TRANSFER_DURING_COVID_19,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           CustomYesNoSpecify(
             labelText: Keys.HAVING_VOTER_CARD,
             attribute: Keys.HAVING_VOTER_CARD,
@@ -111,14 +111,14 @@ class SocialSecurity extends StatelessWidget {
             keyboardType: TextInputType.text,
             validators: [
                   (val) {
-                if (Validator.isValidPanCard(val)) {
+                if (Validator.isValidVoterCard(val)) {
                   return null;
                 } else {
-                  return "Enter Valid Voter Id No";
+                  return Intl.message(Keys.ENTER_VALID_VOTER_CARD??"");
                 }
               }
             ],
-            yesLabelText: "Enter Voter Id Number",
+            yesLabelText: Intl.message(Keys.ENTER_VOTER_CARD),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.HAVING_VOTER_CARD,
@@ -139,11 +139,11 @@ class SocialSecurity extends StatelessWidget {
                 if (Validator.isValidPanCard(val)) {
                   return null;
                 } else {
-                  return "Enter Valid Pan Card No";
+                  return Intl.message(Keys.ENTER_VALID_PAN_CARD??"");
                 }
               }
             ],
-            yesLabelText: "Enter Pan Card Number",
+            yesLabelText: Intl.message(Keys.ENTER_PAN_CARD),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.HAVING_PAN_CARD,
@@ -167,11 +167,11 @@ class SocialSecurity extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return "Enter Valid Divyang Certificate No";
+                  return Intl.message(Keys.ENTER_VALID_DIVYANG_CERTI_NMBR??"");
                 }
               }
             ],
-            yesLabelText: "Enter Divyang Certificate Number",
+            yesLabelText: Intl.message(Keys.ENTER_DIVYANG_CERTI_NMBR),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.HAVING_DIVYANG_CERTI,

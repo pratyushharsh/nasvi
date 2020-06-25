@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:intl/intl.dart';
 import 'package:nasvi/config/validator.dart';
 import 'package:nasvi/widget/custom-card.dart';
 import 'package:nasvi/widget/custom-widget.dart';
@@ -16,12 +17,12 @@ class PersonalDetail extends StatelessWidget {
     return MyCustomCard(
       child: Column(
         children: <Widget>[
-          Text("Personal Detail",
+          Text(Intl.message(Keys.PERSONAL_DETAIL),
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           MyFormBuilderTextField(
               attribute: Keys.NAME,
               labelText: Keys.NAME,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderTextField(
             attribute: Keys.NICK_NAME,
             labelText: Keys.NICK_NAME,
@@ -35,7 +36,7 @@ class PersonalDetail extends StatelessWidget {
                 if (Validator.isValidAge(val)) {
                   return null;
                 } else {
-                  return "Enter Age  code";
+                  return Intl.message(Keys.VALID_AGE);
                 }
               }
             ],),
@@ -43,17 +44,17 @@ class PersonalDetail extends StatelessWidget {
               attribute: Keys.GENDER,
               labelText: Keys.GENDER,
               options: Keys.MALE_FEM_OTHER,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.APL_CATEGORY,
               labelText: Keys.APL_CATEGORY,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.BPL_CATEGORY,
               labelText: Keys.BPL_CATEGORY,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           CustomYesNoSpecify(
             labelText: Keys.RATION_CARD,
             attribute: Keys.RATION_CARD,
@@ -64,11 +65,11 @@ class PersonalDetail extends StatelessWidget {
                 if (Validator.isValidRationCard(val)) {
                   return null;
                 } else {
-                  return Keys.ENTER_VALID_RATION_CARD_N0;
+                  return Intl.message(Keys.ENTER_VALID_RATION_CARD_N0);
                 }
               }
             ],
-            yesLabelText: Keys.ENTER_RATION_CARD_N0,
+            yesLabelText:Intl.message(Keys.ENTER_RATION_CARD_N0),
           ),
           //        MyFormBuilderRadio(
 //              attribute: Keys.RATION_CARD,
@@ -82,17 +83,17 @@ class PersonalDetail extends StatelessWidget {
               attribute: Keys.CVOID_19_CAMPION,
               labelText: Keys.CVOID_19_CAMPION,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.CVOID_19_RATION_RECEIVE,
               labelText: Keys.CVOID_19_RATION_RECEIVE,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
           MyFormBuilderRadio(
               attribute: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
               labelText: Keys.AYUSHMAN_OR_SWASTHYA_CARD,
               options: Keys.YES_NO,
-              validators: [FormBuilderValidators.required()]),
+              validators: [FormBuilderValidatorss.required()]),
         ],
       ),
     );

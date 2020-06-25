@@ -15,13 +15,13 @@ class AgriculturalLabour extends StatelessWidget {
               attribute: Keys.MGNREGA_JOB_CARD,
               labelText: Keys.MGNREGA_JOB_CARD,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.WORK_UNDR_MGNREGA,
               labelText: Keys.WORK_UNDR_MGNREGA,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderTextField(
             attribute: Keys.WORKING_DAYS_FOR_MGNREGA,
@@ -31,7 +31,7 @@ class AgriculturalLabour extends StatelessWidget {
               attribute: Keys.GET_ANY_PAYMENT,
               labelText: Keys.GET_ANY_PAYMENT,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
 
         ],

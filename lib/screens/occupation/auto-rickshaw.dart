@@ -17,20 +17,20 @@ class AutoRickshaw extends StatelessWidget {
             attribute: Keys.OWNER_OF_YOUR_AUTO_RICKSHAW,
             labelText: Keys.OWNER_OF_YOUR_AUTO_RICKSHAW,
             options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
 
           ),
           MyFormBuilderRadio(
               attribute: Keys.REG_WITH_MUNUICIPAL_BODY,
               labelText: Keys.REG_WITH_MUNUICIPAL_BODY,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.LICENSE_MUNICIPAL_BODY,
               labelText: Keys.LICENSE_MUNICIPAL_BODY,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
         ],
       ),

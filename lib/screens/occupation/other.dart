@@ -16,7 +16,7 @@ class Other extends StatelessWidget {
           MyFormBuilderTextField(
             attribute: Keys.DETAIL_OF_YOUR_OCCUPATION,
             labelText: Keys.DETAIL_OF_YOUR_OCCUPATION,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
         ],
       ),

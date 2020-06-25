@@ -19,13 +19,13 @@ class ConstructionWorker extends StatelessWidget {
               attribute: Keys.REG_WITH_WELFARE_BOARD,
               labelText: Keys.REG_WITH_WELFARE_BOARD,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           MyFormBuilderRadio(
               attribute: Keys.LABOUR_ID_CARD,
               labelText: Keys.LABOUR_ID_CARD,
               options: Keys.YES_NO,
-            validators: [FormBuilderValidators.required()],
+            validators: [FormBuilderValidatorss.required()],
           ),
           CustomYesNoSpecify(
             labelText: Keys.RECV_AUZAAR_OR_OTHER_SCHEME,
@@ -37,11 +37,11 @@ class ConstructionWorker extends StatelessWidget {
                 if (Validator.isValidName(val)) {
                   return null;
                 } else {
-                  return " mension the other scheme required";
+                  return Intl.message(Keys.MENTION_OTHER_SCHEME_REQ);
                 }
               }
             ],
-            yesLabelText: "if Yes then mension the other scheme  ",
+            yesLabelText: Intl.message(Keys.MENTION_OTHER_SCHEME),
           ),
 //          MyFormBuilderRadio(
 //              attribute: Keys.RECV_AUZAAR_OR_OTHER_SCHEME,
